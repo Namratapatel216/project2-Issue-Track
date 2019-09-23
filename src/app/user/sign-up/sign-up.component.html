@@ -1,0 +1,146 @@
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="../../index2.html" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>A</b>LT</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Issue</b>Track</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+           <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown notifications-menu">
+                <a href="javascript:void(0);" [routerLink]="['/Signup']">
+                  SignUp
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="javascript:void(0);" [routerLink]="['/Login']">Issue Track</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="nav navbar-nav ml-auto" id="collapsibleNavbar">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);" (click)="login()">Login </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto middle_divs">
+            <div class="card card-signin my-5" style="border: 0px!important;">
+                <div class="card-body">
+                    <div class="info-form"
+                        style="border:1px solid;border-color:lightgrey;border-radius:25px;padding:5%;">
+                        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign Up</h1>
+                        <div class="social-login">
+                            <button class="btn facebook-button social-button" type="button"><a style="color:white" href="javascript:void(0);" (click)="signInWithFB()"><span><i
+                                        class="fab fa-facebook-f"></i> Sign up with Facebook</span></a></button>
+                            <button class="btn google-button social-button" type="button"><a style="color:white" href="javascript:void(0);" (click)="signInWithGoogle()"><span><i
+                                        class="fab fa-google-plus-g"></i> Sign up with Google+</span> </a></button>
+                        </div>
+                        <p style="text-align:center"> OR </p>
+                        <form #SignUpForm="ngForm" (ngSubmit)="signup_data()" class="form-inlin justify-content-center">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Username</label>
+                                <input type="text" name="uname" [(ngModel)]="uname" #u_name="ngModel"
+                                    class="form-control" id="Username" aria-describedby="userHelp"
+                                    placeholder="Enter Username" required>
+                                <div style="display: none;margin-top: 1%" id="Username_validation"
+                                    class="alert alert-danger" role="alert">
+                                    The Username contains illegal characters.
+                                </div>
+                            </div>
+                            <div class="phone-list" style="color: lightgrey;margin-bottom: 1rem">
+                                <label for="exampleInputEmail1">Mobile Number</label>
+                                <div class="input-group phone-input">
+                                    <span class="input-group-btn" style="width:30%;">
+                                        <select class="form-control" name="cntry" [(ngModel)]="cntry"
+                                            id="exampleFormControlSelect2" (change)="getcountryname(cntry)">
+                                            <option [value]="default">Select Country</option>
+                                            <option *ngFor="let cntrs of entries" [value]="cntrs[0]">{{cntrs[1]}}
+                                            </option>
+                                        </select>
+                                    </span>
+                                    <input type="hidden" id="cc_code" name="country_code" [(ngModel)]="country_code"
+                                        [value]="cntry_code" />
+                                    <input type="hidden" id="cc_name" name="name_of_country"
+                                        [(ngModel)]="name_of_country" ng-init="name_of_country=2"
+                                        ng-value="name_of_country" #c_name="ngModel" class="type-input"
+                                        [value]="cntry" />
+                                    <input type="text" id="mobileNumber" name="mobileNumber" [(ngModel)]="mobileNumber"
+                                        #m_no="ngModel" class="form-control" placeholder="+1 (999) 999 9999"
+                                        value="{{cntry_code}}" />
+                                </div>
+                                <div style="display: none;margin-top: 1%" id="mobile_number_validation"
+                                    class="alert alert-danger" role="alert">
+                                    The Username contains illegal characters.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" name="email" [(ngModel)]="email" #mail="ngModel"
+                                    class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                    placeholder="Enter email">
+                                <div style="display: none;margin-top: 1%" id="email_validation"
+                                    class="alert alert-danger" role="alert">
+                                    Please Enter Email Address.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" name="password" [(ngModel)]="password" #pwd="ngModel"
+                                    class="form-control" (keyup)="PassRequirements($event.target.value)"
+                                    id="exampleInputPassword1" placeholder="Password">
+                                <div class="message arrow-top" id="messagebox">
+                                    <div class="tooltiptext" id="tooltiptext">
+                                        <h3>Password Requirements:</h3>
+                                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                                        <p id="number" class="invalid">A <b>number</b></p>
+                                        <p id="length" class="invalid">Minimum <b>7 characters</b> and maximum <b>14
+                                                characters</b></p>
+                                    </div>
+                                </div>
+                                <div style="display: none;margin-top: 1%" id="password_validation"
+                                    class="alert alert-danger" role="alert">
+                                    The Password Does not met Requirements.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Confirm Password</label>
+                                <input type="password" name="cnf_pwd" [(ngModel)]="cnf_pwd" #rpwd="ngModel"
+                                    class="form-control" id="exampleInputConfirmPassword1"
+                                    placeholder="Confirm Password">
+                                <div style="display: none;margin-top: 1%" id="retype_password_validation"
+                                    class="alert alert-danger" role="alert">
+                                    Password Does not Match.
+                                </div>
+                            </div>
+                            <div class="loader" id="loader" ></div>
+                            <button type="submit" class="btn btn_width btn-success" id="signup_submit" [disabled]="!SignUpForm.form.valid"><i
+                                    class="fas fa-user-plus"></i>&nbsp;Sign Up</button>
+                        </form>
+                        <hr>
+                        <div class="forgot-password-link" style="text-align: center;color:black">
+                            Already have an account? <a [routerLink]="['/Login']">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

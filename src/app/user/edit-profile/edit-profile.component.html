@@ -1,0 +1,118 @@
+<div class="wrapper">
+  <header class="main-header">
+    <a href="../../index2.html" class="logo">
+      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-lg"><b>Issue</b>Track</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="">{{Issue_Track_UserName}}</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                      <a href="javascript:void(0);" (click)="edit_profile()" class="btn btn-default btn-flat User-profile-btn">Edit Profile</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" (click)="change_password()" class="btn btn-default btn-flat User-profile-btn">Change Password</a>
+                  </li>
+                  <li>
+                      <a href="javascript:void(0);" (click)="logout()" class="btn btn-default btn-flat User-profile-btn">Sign out</a>
+                  </li>
+                </ul>
+              </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <div class="user-panel">
+          <div class="pull-left image" *ngIf="Issue_Track_socialPlatform == 'google' || Issue_Track_socialPlatform == 'facebook'">
+              <img src="{{Issue_Track_provider_pic}}" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left image" *ngIf="Issue_Track_socialPlatform == 'normal'">
+            <img src="../../../assets/img/empty_avatar.jpg" class="img-circle" alt="User Image">
+          </div>
+        <div class="pull-left info" style="height:auto;">
+          <p>{{Issue_Track_UserName}}</p>
+        </div>
+      </div>
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="">
+          <a href="javascript:void(0);" [routerLink]="['/Dashboard']">
+            <i class="fa fa-th"></i> <span>Dashboard</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </aside>
+  <div class="content-wrapper">
+    <section class="content">
+      <div class="row">
+        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto middle_divs">
+          <div class="card card-signin my-5" style="border: 0px!important;">
+            <div class="card-body">
+              <div class="info-form" style="border:1px solid;border-color:lightgrey;border-radius:25px;padding:5%;">
+                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Edit Profile</h1>
+                <form #SignUpForm="ngForm" (ngSubmit)="edit_profile_data()" class="form-inlin justify-content-center">
+                  <div class="form-group">
+                    <input type="hidden" name="logged_in_user_id" id="logged_in_user_id"
+                      [(ngModel)]="Issue_Track_UserId" [value]="Issue_Track_UserId">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" name="uname" [(ngModel)]="fetched_user_info.userName" #u_name="ngModel"
+                      class="form-control" id="Username" aria-describedby="userHelp" placeholder="Enter Username"
+                      required>
+                    <div style="display: none;margin-top: 1%" id="Username_validation" class="alert alert-danger"
+                      role="alert">
+                      The Username contains illegal characters.
+                    </div>
+                  </div>
+                  <div class="phone-list" style="color: lightgrey;margin-bottom: 1rem">
+                    <label for="exampleInputEmail1">Mobile Number</label>
+                    <div class="input-group phone-input">
+                      <span class="input-group-btn" style="width:30%;">
+                        <select class="form-control" name="cntry" [(ngModel)]="fetched_user_info.country_name"
+                          id="exampleFormControlSelect2" (change)="getcountryname($event.target.value)">
+                          <option [value]="null">Please select Country</option>
+                          <option *ngFor="let cntrs of entries" [value]="cntrs[0]"
+                            [selected]="fetched_user_info.country_name == cntrs[0]">{{cntrs[1]}}
+                          </option>
+                        </select>
+                      </span>
+                      <input type="hidden" id="cc_code" name="country_code" [(ngModel)]="fetched_user_info.country_code"
+                        [value]="cntry_code" />
+                      <input type="hidden" id="cc_code_length" name="cc_code_length"
+                        [(ngModel)]="fetched_user_info.cntry_code_length" [value]="cntry_code_length" />
+                      <input type="hidden" id="cc_name" name="name_of_country"
+                        [(ngModel)]="fetched_user_info.country_name" ng-init="name_of_country=2"
+                        ng-value="name_of_country" #c_name="ngModel" class="type-input" [value]="cntry" />
+                      <input type="text" id="mobileNumber" name="mobileNumber"
+                        [(ngModel)]="fetched_user_info.mobileNumber" #m_no="ngModel" class="form-control"
+                        placeholder="+1 (999) 999 9999" value="{{cntry_code}}" />
+                    </div>
+                    <div style="display: none;margin-top: 1%" id="mobile_number_validation" class="alert alert-danger"
+                      role="alert">
+                      The Username contains illegal characters.
+                    </div>
+                  </div>
+                  <div class="loader" id="loader"></div>
+                  <button type="submit" class="btn btn_width btn-success" id="signup_submit"
+                    [disabled]="!SignUpForm.form.valid"><i class="fas fa-edit"></i>&nbsp;Edit Profile</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

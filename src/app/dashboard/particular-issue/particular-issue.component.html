@@ -1,0 +1,465 @@
+<div class="wrapper">
+  <header class="main-header">
+    <a href="../../index2.html" class="logo">
+      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-lg"><b>Issue</b>Track</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <span class="">{{Issue_Track_UserName}}</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                      <a href="javascript:void(0);" (click)="edit_profile()" class="btn btn-default btn-flat User-profile-btn">Edit Profile</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" (click)="change_password()" class="btn btn-default btn-flat User-profile-btn">Change Password</a>
+                  </li>
+                  <li>
+                      <a href="javascript:void(0);" (click)="logout()" class="btn btn-default btn-flat User-profile-btn">Sign out</a>
+                  </li>
+                </ul>
+              </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      <div class="user-panel">
+          <div class="pull-left image" *ngIf="Issue_Track_socialPlatform == 'google' || Issue_Track_socialPlatform == 'facebook'">
+              <img src="{{Issue_Track_provider_pic}}" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left image" *ngIf="Issue_Track_socialPlatform == 'normal'">
+            <img src="../../../assets/img/empty_avatar.jpg" class="img-circle" alt="User Image">
+          </div>
+        <div class="pull-left info" style="height:auto;">
+          <p>{{Issue_Track_UserName}}</p>
+        </div>
+      </div>
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="">
+          <a href="javascript:void(0);" [routerLink]="['/Dashboard']">
+            <i class="fa fa-th"></i> <span>Dashboard</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </aside>
+  <div class="content-wrapper">
+    <section class="content-header">
+      <h1 id="whole_title_content">
+        <div class="inner-addon right-addon">
+          <i id="title_edit_icon" class="fa fa-pencil fa-1" aria-hidden="true" style="display: none;"></i>
+          <input class="form-control hover_input" type="text" name="issue_title_data"
+            [(ngModel)]="issue_info_from_api.issue_title" #I_title="ngModel" id="issue_title_">
+        </div>
+        <div class="title_ok_cancel_btn" id="title_ok_cancel_btn">
+          <button class="btn ok_btn" (click)="update_issue_title()">&#10004;</button>
+          <button class="btn cancel_btn" (click)="remove_updated_title()">&#10008;</button>
+        </div>
+      </h1>
+    </section>
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-primary">
+            <div class="box-body pad table-responsive">
+              <div class="col-md-6 issue_detail_section">
+                <h6><span><b>Details</b></span></h6>
+                <table class="table text-left">
+                  <tr>
+                    <td>Status</td>
+                    <td>
+                      <div class="inner-addon right-addon">
+                        <i id="status_edit_icon" class="fa fa-pencil fa-1" aria-hidden="true"
+                          style="display: none;padding:2.5%"></i>
+                        <select style="color:black;" class="form-control status_selction" id="issue_status"
+                          name="issue_status" [(ngModel)]="issue_info_from_api.issue_status"
+                          (change)="change_issue_status($event.target.value)">
+                          <option [ngValue]="In_Backlog" [selected]="issue_info_from_api.issue_status=='In Backlog'">In
+                            Backlog</option>
+                          <option [ngValue]="In_Process" [selected]="issue_info_from_api.issue_status=='In Process'">In
+                            Process</option>
+                          <option [ngValue]="In_Test" [selected]="issue_info_from_api.issue_status=='In Test'">In Test
+                          </option>
+                          <option [ngValue]="Done" [selected]="issue_info_from_api.issue_status=='Done'">Done</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <h6><span><b>Description</b></span></h6>
+                <table class="table text-left">
+                  <ng-container
+                    *ngIf="issue_info_from_api.issue_description === undefined || issue_info_from_api.issue_description === null || issue_info_from_api.issue_description === '' ">
+                    <tr>
+                      <td>
+                        <div class="description_text_div inner-addon right-addon" id="description_text_div"
+                          style="display: block;">
+                          <i id="title_edit_icon" class="fa fa-pencil fa-1" aria-hidden="true"
+                            style="display: none;"></i>
+                          Click To Add Description
+                        </div>
+                      </td>
+                    </tr>
+                  </ng-container>
+                  <ng-container
+                    *ngIf="issue_info_from_api.issue_description != undefined || issue_info_from_api.issue_description != null || issue_info_from_api.issue_description != '' ">
+                    <tr>
+                      <td id=description_text_div_td>
+                        <div [innerHTML]="issue_info_from_api.issue_description" class="description_text_div inner-addon right-addon" id="description_text_div"
+                          style="display: block;">
+                          <i id="description_edit_icon_" class="fa fa-pencil fa-1" aria-hidden="true"
+                            style="display: none;"></i>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr id="editor_content" style="display:none;">
+                      <td>
+                        <app-ngx-editor [placeholder]="'Enter text here...'" [height]="'200px'" [minHeight]="'50px'"
+                          [spellcheck]="true" [(ngModel)]="issue_info_from_api.issue_description"
+                          name="issue_description" #i_desc="ngModel"></app-ngx-editor>
+                      </td>
+                    </tr>
+                    <tr id="editor_content_btns" style="display:none;width:100% !important;">
+                      <td>
+                        <button class="btn btn-primary" (click)="description_save_btn();">Save</button>
+                      </td>
+                      <td>
+                        <button class="btn" style="margin-left:2% !important;"
+                          (click)="description_cancel_btn();">Cancel</button>
+                      </td>
+                    </tr>
+                  </ng-container>
+                </table>
+                <h6><span><b>Attachments</b></span></h6>
+                <table class="table text-left">
+                  <tr>
+                    <td>
+                      <img id="attchament_img_display" src="" style="display: none;" title="Click On Image To Download">
+                      <a id="download_attachment" href="javascript:void(0);" style="display: none">Download Attached Document From This Link</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-group">
+                        <label for="exampleInputFile">Attachment</label>
+                        <input type="file" name="attachments" [(ngModel)]="attachments" #i_attachments="ngModel"
+                          id="is_attcah" (change)="OnFileSelected($event)">
+                          <img src="" id="blah" style="display:none;height:100px;width:100px;">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button class="btn btn-primary" (click)="attachment_save_btn();">Save</button>
+                      <button class="btn" style="margin-left:2% !important;"
+                        (click)="attachment_cancel_btn();">Cancel</button>
+                    </td>
+                  </tr>
+                </table>
+                <h6><span><b>Activity</b></span></h6>
+                <table class="table text-left">
+                  <tr>
+                    <div class="row">
+                      <div class="col-md-12">
+                          <div class="detailBox">
+                              <div class="actionBox">
+                                  <ul class="commentList">
+                                      <li *ngFor="let x of all_comments">
+                                          <div class="commenterImage">
+                                            <img src="http://placekitten.com/45/45" />
+                                          </div>
+                                          <div class="commentText">
+                                              <p><b>{{x['commenter_user_name']}}</b> <span class="date sub-text">&nbsp;&nbsp;{{x['posted_time']}}</span></p>
+                                              <p class="" style="margin-top:1%;margin-bottom:5%" [innerHTML]="x['comment']"></p> 
+                                          </div>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                        <input style="border: 1px;border-radius:1px;padding:4%;display: block" class="form-control"
+                          type="text" id="add_comment_section_input" placeholder="Add a comment..."
+                          (click)="add_comment_editor()">
+                        <app-ngx-editor id="add_comment" [placeholder]="'Add a comment...'" [height]="'200px'"
+                          [minHeight]="'50px'" [spellcheck]="true" [(ngModel)]="add_comment_Section" name="add_comment_Section"
+                          #i_comment="ngModel" style="display:none;"></app-ngx-editor>
+                        <div class="title_ok_cancel_btn" id="comment_ok_cancel_btn"
+                          style="display: none;float: left;width: 100% !important;">
+                          <button class="btn btn-primary" (click)="add_comment_to_section()">Post Comment</button>
+                          <button class="btn cancel_btn" (click)="remove_add_comment_editor()"
+                            style="margin-left: 2% !important;">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </tr>
+                </table>
+              </div>
+              <div class="col-md-5 issue_people_section">
+                <h6><span><b>People</b></span></h6>
+                <table class="table text-left content_table">
+                  <tr>
+                    <td>Assignee</td>
+                    <td>
+                      <div class="inner-addon right-addon">
+                        <i id="assignee_edit_icon" class="fa fa-pencil fa-1" aria-hidden="true"
+                          style="display: none;padding:2.5%"></i>
+                        <input class="form-control assignee_text_div" list="Assignee_name_list"
+                          name="issue_assignee_name" [(ngModel)]="issue_info_from_api.issue_assignee_name"
+                          id="Assignee_name">
+                      </div>
+                    </td>
+                    <datalist id="Assignee_name_list">
+                      <option *ngFor="let u_list of all_users_list" id="{{u_list.userId}}"
+                        data-value="{{u_list.userName}}" value="{{u_list.userName}}">
+                    </datalist>
+                    <input type="hidden" name="origional_issue_assignee"
+                      [(ngModel)]="origional_issue_info.old_issue_assignee_name" id="origional_issue_assignee_name"
+                      value="{{origional_issue_info.old_issue_assignee_name}}">
+                    <button id="update_assignee" style="display: none;" (click)="update_assignee();">Update
+                      Assignee</button>
+                  </tr>
+                  <tr>
+                    <td>Reporter</td>
+                    <td>
+                      <div class="inner-addon right-addon">
+                        <i id="reporter_edit_icon" class="fa fa-pencil fa-1" aria-hidden="true"
+                          style="display: none;padding:2.5%"></i>
+                        <input class="form-control repporter_text_div" list="Reporter_name_list" type="search"
+                          name="issue_reporter_name" [(ngModel)]="issue_info_from_api.issue_reporter_name"
+                          id="Reporter_name">
+                      </div>
+                    </td>
+                    <datalist id="Reporter_name_list">
+                      <option *ngFor="let u_list of all_users_list" id="{{u_list.userId}}"
+                        data-value="{{u_list.userName}}" value="{{u_list.userName}}">
+                    </datalist>
+                    <input type="hidden" name="origional_issue_reporter"
+                      [(ngModel)]="origional_issue_info.old_issue_reporter_name" id="origional_issue_reporter_name"
+                      value="{{origional_issue_info.old_issue_reporter_name}}">
+                    <button id="update_reporter" style="display: none;" (click)="update_reporter();">Update
+                      Reporter</button>
+                  </tr>
+                  <tr>
+                    <td>Watchers</td>
+                    <td>
+                      <div class="btn-group"><a href="javascript:void(0);" id="watchers_cnt"
+                          (click)="open_dropdown_of_watcher();"><i class="fa fa-eye"
+                            aria-hidden="true"></i>&nbsp;{{watcher_id_array.length}}</a>
+                        <ul class="dropdown-menu watcher_m_d" id="watcher_m_d" style="display:none;">
+                          <li>
+                            <div class="watcher_drp">
+                              <a href="javascript:void(0);" (click)="watch_issue()"
+                                *ngIf="watcher_id_array.includes(Issue_Track_UserId) === false">
+                                <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Start Watching This issue
+                              </a>
+                              <a href="javascript:void(0);" (click)="stop_watch_issue()"
+                                *ngIf="watcher_id_array.includes(Issue_Track_UserId) === true">
+                                <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;Stop Watching This issue
+                              </a>
+                              <hr>
+                            </div>
+                            <div class="watcher_list">
+                              <div class="watcher_list_header">
+                                <h5>Watchers List</h5>
+                              </div>
+                              <div>
+                                <table class="table text-center">
+                                  <tr *ngFor="let user_name of watcher_name_array">
+                                    {{user_name}}
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <h6><span><b>Dates</b></span></h6>
+                <table class="table text-left">
+                  <tr>
+                    <td>Created</td>
+                    <td>{{issue_info_from_api.issue_posted_date}}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+                <p>New phone +1(800)555-1234</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                <p>nora@example.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+                <p>Execution time 5 seconds</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="label label-danger pull-right">70%</span>
+              </h4>
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Update Resume
+                <span class="label label-success pull-right">95%</span>
+              </h4>
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Laravel Integration
+                <span class="label label-warning pull-right">50%</span>
+              </h4>
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Back End Framework
+                <span class="label label-primary pull-right">68%</span>
+              </h4>
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Allow mail redirect
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+            <p>
+              Other sets of options are available
+            </p>
+          </div>
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Expose author name in posts
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+            <p>
+              Allow the user to show his name in blog posts
+            </p>
+          </div>
+          <h3 class="control-sidebar-heading">Chat Settings</h3>
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Show me as online
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Turn off notifications
+              <input type="checkbox" class="pull-right">
+            </label>
+          </div>
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Delete chat history
+              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <div class="control-sidebar-bg"></div>
+</div>
+
+<ngx-smart-modal data-backdrop="static" data-keyboard="false" #popuptwo [identifier]="'popuptwo'"
+  customClass="msg-modal">
+  <div>
+    <div class="cretae_issue_header">
+      <h2>Create Issue</h2>
+    </div>
+    <hr>
+    <button (click)="popuptwo.close()" style="display: none;" id="close_btn_creation_isssue">Close</button>
+  </div>
+</ngx-smart-modal>

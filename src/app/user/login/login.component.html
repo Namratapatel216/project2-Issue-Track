@@ -1,0 +1,108 @@
+<div class="wrapper">
+<header class="main-header">
+    <a href="../../index2.html" class="logo">
+      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-lg"><b>Issue</b>Track</span>
+    </a>
+    <nav class="navbar navbar-static-top">
+       <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown notifications-menu">
+            <a href="javascript:void(0);" [routerLink]="['/Signup']">
+              SignUp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</header>
+<!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="javascript:void(0);" [routerLink]="['/Login']">Issue Track</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="nav navbar-nav ml-auto" id="collapsibleNavbar">
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);" (click)="signUp()">SignUp </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto middle_divs">
+            <div class="card card-signin my-5" style="border: 0px!important;">
+                <div class="card-body">
+                    <div class="info-form"
+                        style="border:1px solid;border-color:lightgrey;border-radius:25px;padding:5%;">
+                        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+
+                            <div class="social-login">
+                                <button class="btn facebook-button social-button" type="button"><a style="color:white" href="javascript:void(0);" (click)="signInWithFB()"><span><i
+                                    class="fab fa-facebook-f"></i> Sign up with Facebook</span></a></button>
+                        <button class="btn google-button social-button" type="button"><a style="color:white" href="javascript:void(0);" (click)="signInWithGoogle()"><span><i
+                                    class="fab fa-google-plus-g"></i> Sign up with Google+</span> </a></button>
+                            </div>
+                            <p style="text-align:center"> OR  </p>
+
+                        <form #LoginForm="ngForm" (ngSubmit)="login_data()" class="form-inlin justify-content-center">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Username</label>
+                                <input type="text" name="uname" [(ngModel)]="uname" #u_name="ngModel"
+                                    class="form-control" id="Username" aria-describedby="userHelp"
+                                    placeholder="Enter Username">
+                                    <div style="display: none;margin-top: 1%" id="Username_validation" class="alert alert-danger" role="alert">
+                                        The Username contains illegal characters.
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" name="password" [(ngModel)]="password" #pwd="ngModel"
+                                    class="form-control" (keyup)="PassRequirements($event.target.value)"
+                                    id="exampleInputPassword1" placeholder="Password">
+
+                                <div class="message arrow-top" id="messagebox" style="display: none;">
+                                    <div class="tooltiptext" id="tooltiptext" style="visibility: hidden">
+                                        <h3>Password must contain the following:</h3>
+                                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                                        <p id="number" class="invalid">A <b>number</b></p>
+                                        <p id="length" class="invalid">Minimum <b>7 characters</b> and maximum <b>14
+                                                characters</b></p>
+                                    </div>
+                                </div>
+
+                                <div style="display: none;margin-top: 1%" id="password_validation" class="alert alert-danger" role="alert">
+                                    The Password Does not met Requirements.
+                                </div>
+
+                            </div>
+                            <div class="loader" id="loader" ></div>
+                            <button id="login_submit" type="submit" class="btn btn_width btn-success"><i class="fas fa-sign-in-alt"></i>Sign in</button>
+                        </form>
+
+                        <div class="forgot-password-link">
+                            <a [routerLink]="['/forgot-password']">Forgot-password??</a>
+                        </div>
+                        <hr>
+                        <div class="create-account">
+                                
+                        <button type="submit" class="btn btn_width btn-primary sign_up_btn" style="cursor: pointer;">
+                            <a [routerLink]="['/Signup']" style="cursor: pointer;">
+                                <i class="fas fa-user-plus"></i>Sign up New Account
+                            </a>
+                        </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
