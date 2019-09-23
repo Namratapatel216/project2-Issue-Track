@@ -252,6 +252,7 @@ export class LoginComponent implements OnInit {
       }
       else
       {
+        alert();
         $('#loader').hide(0);
         this.toastr.error(apiResponse['message']);
       }
