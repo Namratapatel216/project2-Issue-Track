@@ -596,6 +596,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var dropbox__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! dropbox */ "./node_modules/dropbox/dist/Dropbox-sdk.min.js");
+/* harmony import */ var dropbox__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(dropbox__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -608,6 +610,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+let dbx = new dropbox__WEBPACK_IMPORTED_MODULE_11__["Dropbox"]({ accessToken: '8OFJNocMFEAAAAAAAAAAXK3j1_nOJD4ucrs968yWHZdnhKbS7SWQmvQe-W6nzpjc' });
 let DashboardComponentComponent = class DashboardComponentComponent {
     constructor(title, toastr, filterPipe, _router, ngxSmartModalService, socket_service, cookie, user_service) {
         this.title = title;
@@ -853,8 +857,17 @@ let DashboardComponentComponent = class DashboardComponentComponent {
                         issue_status: 'In Backlog',
                         issue_posted_date: Date.now()
                     };
-                    jquery__WEBPACK_IMPORTED_MODULE_9__('#loader').show(0);
-                    this.socket_service.create_issue(create_issue_data);
+                    //$('#loader').show(0);
+                    dbx.filesUpload({ path: '/' + this.attachments.name, contents: this.attachments })
+                        .then(function (response) {
+                        alert("file uploaded");
+                        console.log(response);
+                    })
+                        .catch(function (error) {
+                        alert(error);
+                        console.error(error);
+                    });
+                    //this.socket_service.create_issue(create_issue_data);
                 }
                 else {
                     let create_issue_data = {
@@ -2665,10 +2678,10 @@ __webpack_require__.r(__webpack_exports__);
 let SocketService = class SocketService {
     constructor(_http) {
         this._http = _http;
-        this.baseUrl = "http://api.npatelproject.site";
-        this.IssueUrl = "http://api.npatelproject.site/api/v1/Issues";
-        this.USerUrl = "http://api.npatelproject.site/api/v1/users";
-        this.commentUrl = "http://api.npatelproject.site/api/v1/Comments";
+        this.baseUrl = "http://localhost:3000";
+        this.IssueUrl = "http://localhost:3000/api/v1/Issues";
+        this.USerUrl = "http://localhost:3000/api/v1/users";
+        this.commentUrl = "http://localhost:3000/api/v1/Comments";
         this.create_issue = (create_issue_data) => {
             console.log("create issue");
             this.socket.emit("create-issue", create_issue_data);
@@ -2783,7 +2796,7 @@ let SocketService = class SocketService {
                 }); // end Socket
             }); // end Observable
         };
-        this.notificationUrl = 'http://api.npatelproject.site/api/v1/Notifications';
+        this.notificationUrl = 'http://localhost:3000/api/v1/Notifications';
         this.get_Notification = () => {
             let response = this._http.get(`${this.notificationUrl}/get-all-notification`);
             return response;
@@ -2791,7 +2804,7 @@ let SocketService = class SocketService {
         this.update_notification = (updated_notification_data) => {
             this.socket.emit('update-notification', updated_notification_data);
         };
-        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_3__('http://api.npatelproject.site', { transports: ['websocket'] });
+        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_3__('http://localhost:3000', { transports: ['websocket'] });
     }
 };
 SocketService.ctorParameters = () => [
@@ -2827,7 +2840,7 @@ __webpack_require__.r(__webpack_exports__);
 let UserServiceService = class UserServiceService {
     constructor(_http) {
         this._http = _http;
-        this.baseUrl = "http://api.npatelproject.site/api/v1/users";
+        this.baseUrl = "http://localhost:3000/api/v1/users";
         this.setUserInfoLocalStorage = (data) => {
             localStorage.setItem('Issue_Track_userInfo', JSON.stringify(data));
         };
