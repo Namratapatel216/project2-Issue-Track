@@ -18,7 +18,6 @@ export class VerifyUserComponent implements OnInit {
     let Token_res = {
       Token : token
     }
-    alert(Token_res);
 
     this.user_service.verify_user_token(Token_res).subscribe((apiResponse) => {
       if(apiResponse['status'] == 200)
