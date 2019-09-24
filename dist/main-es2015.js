@@ -596,8 +596,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-/* harmony import */ var dropbox__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! dropbox */ "./node_modules/dropbox/dist/Dropbox-sdk.min.js");
-/* harmony import */ var dropbox__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(dropbox__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
@@ -610,8 +608,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-let dbx = new dropbox__WEBPACK_IMPORTED_MODULE_11__["Dropbox"]({ accessToken: '8OFJNocMFEAAAAAAAAAAXK3j1_nOJD4ucrs968yWHZdnhKbS7SWQmvQe-W6nzpjc' });
 let DashboardComponentComponent = class DashboardComponentComponent {
     constructor(title, toastr, filterPipe, _router, ngxSmartModalService, socket_service, cookie, user_service) {
         this.title = title;
@@ -857,17 +853,8 @@ let DashboardComponentComponent = class DashboardComponentComponent {
                         issue_status: 'In Backlog',
                         issue_posted_date: Date.now()
                     };
-                    //$('#loader').show(0);
-                    dbx.filesUpload({ path: '/' + this.attachments.name, contents: this.attachments })
-                        .then(function (response) {
-                        alert("file uploaded");
-                        console.log(response);
-                    })
-                        .catch(function (error) {
-                        alert(error);
-                        console.error(error);
-                    });
-                    //this.socket_service.create_issue(create_issue_data);
+                    jquery__WEBPACK_IMPORTED_MODULE_9__('#loader').show(0);
+                    this.socket_service.create_issue(create_issue_data);
                 }
                 else {
                     let create_issue_data = {
