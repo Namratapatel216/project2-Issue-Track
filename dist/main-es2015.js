@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <header class=\"main-header\">\n    <a href=\"../../index2.html\" class=\"logo\">\n      <span class=\"logo-mini\"><b>A</b>LT</span>\n      <span class=\"logo-lg\"><b>Issue</b>Track</span>\n    </a>\n    <nav class=\"navbar navbar-static-top\">\n      <a href=\"#\" class=\"sidebar-toggle\" data-toggle=\"push-menu\" role=\"button\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </a>\n      <div class=\"navbar-custom-menu\">\n        <ul class=\"nav navbar-nav\">\n          <!-- <li class=\"dropdown messages-menu\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n              <i class=\"fa fa-envelope-o\"></i>\n              <span class=\"label label-success\">4</span>\n            </a>\n            <ul class=\"dropdown-menu\">\n              <li class=\"header\">You have 4 messages</li>\n              <li>\n                <ul class=\"menu\">\n                  <li>\n                    <a href=\"#\">\n                      <div class=\"pull-left\">\n                        <img src=\"../../dist/img/user2-160x160.jpg\" class=\"img-circle\" alt=\"User Image\">\n                      </div>\n                      <h4>\n                        Support Team\n                        <small><i class=\"fa fa-clock-o\"></i> 5 mins</small>\n                      </h4>\n                      <p>Why not buy a new awesome theme?</p>\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <div class=\"pull-left\">\n                        <img src=\"../../dist/img/user3-128x128.jpg\" class=\"img-circle\" alt=\"User Image\">\n                      </div>\n                      <h4>\n                        AdminLTE Design Team\n                        <small><i class=\"fa fa-clock-o\"></i> 2 hours</small>\n                      </h4>\n                      <p>Why not buy a new awesome theme?</p>\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <div class=\"pull-left\">\n                        <img src=\"../../dist/img/user4-128x128.jpg\" class=\"img-circle\" alt=\"User Image\">\n                      </div>\n                      <h4>\n                        Developers\n                        <small><i class=\"fa fa-clock-o\"></i> Today</small>\n                      </h4>\n                      <p>Why not buy a new awesome theme?</p>\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <div class=\"pull-left\">\n                        <img src=\"../../dist/img/user3-128x128.jpg\" class=\"img-circle\" alt=\"User Image\">\n                      </div>\n                      <h4>\n                        Sales Department\n                        <small><i class=\"fa fa-clock-o\"></i> Yesterday</small>\n                      </h4>\n                      <p>Why not buy a new awesome theme?</p>\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <div class=\"pull-left\">\n                        <img src=\"../../dist/img/user4-128x128.jpg\" class=\"img-circle\" alt=\"User Image\">\n                      </div>\n                      <h4>\n                        Reviewers\n                        <small><i class=\"fa fa-clock-o\"></i> 2 days</small>\n                      </h4>\n                      <p>Why not buy a new awesome theme?</p>\n                    </a>\n                  </li>\n                </ul>\n              </li>\n              <li class=\"footer\"><a href=\"#\">See All Messages</a></li>\n            </ul>\n          </li>\n          <li class=\"dropdown notifications-menu\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n              <i class=\"fa fa-bell-o\"></i>\n              <span class=\"label label-warning\">10</span>\n            </a>\n            <ul class=\"dropdown-menu\">\n              <li class=\"header\">You have 10 notifications</li>\n              <li>\n                <ul class=\"menu\">\n                  <li>\n                    <a href=\"#\">\n                      <i class=\"fa fa-users text-aqua\"></i> 5 new members joined today\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <i class=\"fa fa-warning text-yellow\"></i> Very long description here that may not fit into the\n                      page and may cause design problems\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <i class=\"fa fa-users text-red\"></i> 5 new members joined\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <i class=\"fa fa-shopping-cart text-green\"></i> 25 sales made\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <i class=\"fa fa-user text-red\"></i> You changed your username\n                    </a>\n                  </li>\n                </ul>\n              </li>\n              <li class=\"footer\"><a href=\"#\">View all</a></li>\n            </ul>\n          </li>\n          <li class=\"dropdown tasks-menu\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n              <i class=\"fa fa-flag-o\"></i>\n              <span class=\"label label-danger\">9</span>\n            </a>\n            <ul class=\"dropdown-menu\">\n              <li class=\"header\">You have 9 tasks</li>\n              <li>\n                <ul class=\"menu\">\n                  <li>\n                    <a href=\"#\">\n                      <h3>\n                        Design some buttons\n                        <small class=\"pull-right\">20%</small>\n                      </h3>\n                      <div class=\"progress xs\">\n                        <div class=\"progress-bar progress-bar-aqua\" style=\"width: 20%\" role=\"progressbar\"\n                          aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n                          <span class=\"sr-only\">20% Complete</span>\n                        </div>\n                      </div>\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <h3>\n                        Create a nice theme\n                        <small class=\"pull-right\">40%</small>\n                      </h3>\n                      <div class=\"progress xs\">\n                        <div class=\"progress-bar progress-bar-green\" style=\"width: 40%\" role=\"progressbar\"\n                          aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n                          <span class=\"sr-only\">40% Complete</span>\n                        </div>\n                      </div>\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <h3>\n                        Some task I need to do\n                        <small class=\"pull-right\">60%</small>\n                      </h3>\n                      <div class=\"progress xs\">\n                        <div class=\"progress-bar progress-bar-red\" style=\"width: 60%\" role=\"progressbar\"\n                          aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n                          <span class=\"sr-only\">60% Complete</span>\n                        </div>\n                      </div>\n                    </a>\n                  </li>\n                  <li>\n                    <a href=\"#\">\n                      <h3>\n                        Make beautiful transitions\n                        <small class=\"pull-right\">80%</small>\n                      </h3>\n                      <div class=\"progress xs\">\n                        <div class=\"progress-bar progress-bar-yellow\" style=\"width: 80%\" role=\"progressbar\"\n                          aria-valuenow=\"20\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n                          <span class=\"sr-only\">80% Complete</span>\n                        </div>\n                      </div>\n                    </a>\n                  </li>\n                </ul>\n              </li>\n              <li class=\"footer\">\n                <a href=\"#\">View all tasks</a>\n              </li>\n            </ul>\n          </li> -->\n          <li class=\"dropdown user user-menu\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n              <span class=\"\">{{Issue_Track_UserName}}</span>\n            </a>\n            <ul class=\"dropdown-menu\">\n              <li>\n                  <a href=\"javascript:void(0);\" (click)=\"edit_profile()\" class=\"btn btn-default btn-flat User-profile-btn\">Edit Profile</a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"change_password()\" class=\"btn btn-default btn-flat User-profile-btn\">Change Password</a>\n              </li>\n              <li>\n                  <a href=\"javascript:void(0);\" (click)=\"logout()\" class=\"btn btn-default btn-flat User-profile-btn\">Sign out</a>\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </div>\n    </nav>\n  </header>\n  <aside class=\"main-sidebar\">\n    <section class=\"sidebar\">\n      <div class=\"user-panel\">\n        <div class=\"pull-left image\" *ngIf=\"Issue_Track_socialPlatform == 'google' || Issue_Track_socialPlatform == 'facebook'\">\n            <img src=\"{{Issue_Track_provider_pic}}\" class=\"img-circle\" alt=\"User Image\">\n        </div>\n        <div class=\"pull-left image\" *ngIf=\"Issue_Track_socialPlatform == 'normal'\">\n          <img src=\"../../../assets/img/empty_avatar.jpg\" class=\"img-circle\" alt=\"User Image\">\n        </div>\n        <div class=\"pull-left info\" style=\"height:auto;\">\n          <p>{{Issue_Track_UserName}}</p>\n          <!-- <a href=\"#\"><i class=\"fa fa-circle text-success\"></i> Online</a> -->\n        </div>\n      </div>\n      <ul class=\"sidebar-menu\" data-widget=\"tree\">\n        <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'open_issues'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('open_issues')\">\n            <i class=\"fa fa-th\"></i> <span>My Open Issues</span>\n          </a>\n        </li>\n        <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'issues_assign_to_me'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('issues_assign_to_me')\">\n            <i class=\"fa fa-th\"></i> <span>Assign to me</span>\n          </a>\n        </li>\n        <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'all_issues'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('all_issues')\">\n            <i class=\"fa fa-th\"></i> <span>All Issues</span>\n          </a>\n        </li>\n        <!-- <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'all_open_issues'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('all_open_issues')\">\n            <i class=\"fa fa-th\"></i> <span>open Issues</span>\n          </a>\n        </li>\n        <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'done_issues'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('done_issues')\">\n            <i class=\"fa fa-th\"></i> <span>Done Issues</span> \n          </a>\n        </li> -->\n        <li>\n          <a href=\"javascript:void(0);\" (click)=\"create()\">\n            <i class=\"fa fa-th\"></i> <span>Create Issue</span>\n          </a>\n        </li>\n        \n      </ul>\n    </section>\n  </aside>\n  <div class=\"content-wrapper\">\n    <section class=\"content-header\">\n      <h1>\n        {{view_dashboard_header}}\n      </h1>\n    </section>\n    <div class=\"btn-toolbar mb-2 mb-md-0\">\n    <div class=\"col-xs-12 col-md-12\" style=\"margin-top: 1% !important;margin-bottom: 1% !important;\">\n      <div class=\"col-xs-12 col-md-4 col-sm-12\">\n          <div class=\"input-group\">\n            <input type=\"text\" [(ngModel)]=\"SearchText\" class=\"form-control\" placeholder=\"Search\" id=\"txtSearch\"/>\n            <div class=\"input-group-btn\">\n              <button class=\"btn btn-primary\" type=\"submit\">\n                <span class=\"glyphicon glyphicon-search\"></span>\n              </button>\n            </div>\n          </div>\n      </div>\n      <div class=\"col-xs-12 col-md-2 col-sm-12\">\n          <select [(ngModel)]=\"statusFilter.issue_status\" class=\"form-control\">\n            <option [value]=\"default\" selected>Filter By Status</option>\n            <option>In Backlog</option>\n            <option>In Progress</option>\n            <option>In Test</option>\n            <option>Done</option>\n          </select>\n      </div>\n      <div class=\"col-xs-12 col-md-2 col-sm-12\">\n          <select [(ngModel)]=\"FilterReporter\"  class=\"form-control\">\n            <option [value]=\"default\">Filter By Reporter</option>\n            <option *ngFor=\"let all_users_data of all_users_list\" [value]=\"all_users_data.userId\">{{all_users_data.userName}}</option>\n          </select>\n      </div>\n    </div>\n    </div>\n    <section class=\"content\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"box box-primary\">\n            <div class=\"box-body pad table-responsive\">\n              <table class=\"table table-bordered text-center table-striped\" border=\"1px solid\">\n                <thead class=\"thead-dark\">\n                  <tr>\n                    <th [class.active]=\"order === 'issue_title'\" (click)=\"setOrder('issue_title')\">Issue Title <span [hidden]=\"reverse\">▼</span\n                      ><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_status'\" (click)=\"setOrder('issue_status')\">Status <span [hidden]=\"reverse\">▼</span\n                      ><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_reporter_name'\" (click)=\"setOrder('issue_reporter_name')\">Reporter <span [hidden]=\"reverse\">▼</span\n                      ><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_posted_date'\" (click)=\"setOrder('issue_posted_date')\">Date <span [hidden]=\"reverse\">▼</span\n                      ><span [hidden]=\"!reverse\">▲</span></th>\n                  </tr>\n                </thead>\n                <tr *ngFor=\"let all_issues of Issues | orderBy: order:reverse:'case-insensitive' | filterBy : statusFilter | filter : SearchText | paginate: { itemsPerPage: 10, currentPage: p }\">\n                    <td>\n                      <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\" style=\"cursor: pointer\">{{all_issues['issue_title']}}</a>\n                    </td>\n                    <td>\n                      {{all_issues['issue_status']}}\n                    </td>\n                    <td>\n                      {{all_issues['issue_reporter_name']}}\n                    </td>\n                    <td>\n                      {{all_issues['issue_posted_date']}}\n                    </td>\n                </tr>\n              </table>\n              <div style=\"margin-top:2% !important;\">\n                <pagination-controls (pageChange)=\"p = $event\" directionLinks=\"true\"\n                autoHide=\"true\"\n                responsive=\"true\"\n                previousLabel=\"Previous\"\n                nextLabel=\"Next\"\n                screenReaderPaginationLabel=\"Pagination\"\n                screenReaderPageLabel=\"page\"\n                screenReaderCurrentLabel=\"You're on page\"></pagination-controls>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  </div>\n  <!-- Control Sidebar -->\n  <aside class=\"control-sidebar control-sidebar-dark\">\n    <ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\">\n      <li><a href=\"#control-sidebar-home-tab\" data-toggle=\"tab\"><i class=\"fa fa-home\"></i></a></li>\n      <li><a href=\"#control-sidebar-settings-tab\" data-toggle=\"tab\"><i class=\"fa fa-gears\"></i></a></li>\n    </ul>\n    <div class=\"tab-content\">\n      <div class=\"tab-pane\" id=\"control-sidebar-home-tab\">\n        <h3 class=\"control-sidebar-heading\">Recent Activity</h3>\n        <ul class=\"control-sidebar-menu\">\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-birthday-cake bg-red\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Langdon's Birthday</h4>\n                <p>Will be 23 on April 24th</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-user bg-yellow\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Frodo Updated His Profile</h4>\n                <p>New phone +1(800)555-1234</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-envelope-o bg-light-blue\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Nora Joined Mailing List</h4>\n                <p>nora@example.com</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-file-code-o bg-green\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Cron Job 254 Executed</h4>\n                <p>Execution time 5 seconds</p>\n              </div>\n            </a>\n          </li>\n        </ul>\n        <h3 class=\"control-sidebar-heading\">Tasks Progress</h3>\n        <ul class=\"control-sidebar-menu\">\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Custom Template Design\n                <span class=\"label label-danger pull-right\">70%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Update Resume\n                <span class=\"label label-success pull-right\">95%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-success\" style=\"width: 95%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Laravel Integration\n                <span class=\"label label-warning pull-right\">50%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-warning\" style=\"width: 50%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Back End Framework\n                <span class=\"label label-primary pull-right\">68%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-primary\" style=\"width: 68%\"></div>\n              </div>\n            </a>\n          </li>\n        </ul>\n      </div>\n      <div class=\"tab-pane\" id=\"control-sidebar-stats-tab\">Stats Tab Content</div>\n      <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\">\n        <form method=\"post\">\n          <h3 class=\"control-sidebar-heading\">General Settings</h3>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Report panel usage\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Some information about this general settings option\n            </p>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Allow mail redirect\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Other sets of options are available\n            </p>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Expose author name in posts\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Allow the user to show his name in blog posts\n            </p>\n          </div>\n          <h3 class=\"control-sidebar-heading\">Chat Settings</h3>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Show me as online\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Turn off notifications\n              <input type=\"checkbox\" class=\"pull-right\">\n            </label>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Delete chat history\n              <a href=\"javascript:void(0)\" class=\"text-red pull-right\"><i class=\"fa fa-trash-o\"></i></a>\n            </label>\n          </div>\n        </form>\n      </div>\n    </div>\n  </aside>\n  <div class=\"control-sidebar-bg\"></div>\n</div>\n<ngx-smart-modal data-backdrop=\"static\" data-keyboard=\"false\" #popuptwo [identifier]=\"'popuptwo'\"\n  customClass=\"msg-modal\">\n  <div>\n    <div class=\"cretae_issue_header\">\n      <h2>Create Issue</h2>\n    </div>\n    <input type=\"hidden\" name=\"issue_reporter\" [(ngModel)]=\"Issue_Track_UserId\">\n    <input type=\"hidden\" name=\"issue_reporter_name\" [(ngModel)]=\"Issue_Track_UserName\">\n    <hr>\n    <form #issue_creation_form=\"ngForm\" (ngSubmit)=\"create_iss_ue(); issue_creation_form.reset();\" style=\"padding: 3% !important;\">\n      <div class=\"form-group\">\n        <label for=\"exampleInputEmail1\">Title</label>\n        <input type=\"text\" class=\"form-control\" name=\"issue_title\" [(ngModel)]=\"issue_title\" #i_title=\"ngModel\" id=\"I_Title\" placeholder=\"Please Enter Issue Title\">\n        <div style=\"display: none;margin-top: 1%\" id=\"Issue_title_validation\" class=\"alert alert-danger\" role=\"alert\">\n            The Username contains illegal characters.\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"exampleInputPassword1\">Description</label>\n        <app-ngx-editor [placeholder]=\"'Enter text here...'\" [height]=\"'200px'\" [minHeight]=\"'50px'\" [spellcheck]=\"true\"\n          [(ngModel)]=\"issue_description\" name=\"issue_description\" #i_desc=\"ngModel\"></app-ngx-editor>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"exampleInputFile\">Attachment</label>\n        <input type=\"file\" name=\"attachments\" [(ngModel)]=\"attachments\" #i_attachments=\"ngModel\" id=\"is_attcah\" (change)=\"OnFileSelected($event)\">\n        <img src=\"\" id=\"blah\" style=\"display:none;height:100px;width:100px;\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"exampleInputFile\">Assignee</label>\n        <select class=\"form-control\" name=\"assignee\" [(ngModel)]=\"assignee\" #i_assignee=\"ngModel\">\n          <option [value]=\"default\">Please Select Assignee</option>\n          <option *ngFor=\"let all_users_data of all_users_list\" [value]=\"all_users_data.userId\" id=\"{{all_users_data.userId}}\">{{all_users_data.userName}}</option>\n        </select>\n      </div>\n      <div class=\"loader\" id=\"loader\" ></div>\n      <button id=\"issue_submission_btn\" type=\"submit\" class=\"btn btn-primary\" style=\"margin-top : 2% !important;\">Create Issue</button>\n    </form>\n    <button (click)=\"popuptwo.close()\" style=\"display: none;\" id=\"close_btn_creation_isssue\">Close</button>\n  </div>\n</ngx-smart-modal>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <header class=\"main-header\">\n    <a href=\"../../index2.html\" class=\"logo\">\n      <span class=\"logo-mini\"><b>A</b>LT</span>\n      <span class=\"logo-lg\"><b>Issue</b>Track</span>\n    </a>\n    <nav class=\"navbar navbar-static-top\">\n      <a href=\"#\" class=\"sidebar-toggle\" data-toggle=\"push-menu\" role=\"button\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </a>\n      <div class=\"navbar-custom-menu\">\n        <ul class=\"nav navbar-nav\" style=\"width: auto !important;\">\n          <li class=\"dropdown notifications-menu\" style=\"width: auto !important;\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n              <i class=\"fa fa-bell-o\"></i>\n              <span class=\"label label-warning\">{{Notifications.length}}</span>\n            </a>\n            <ul class=\"dropdown-menu\" style=\"width: auto !important;\">\n              <li class=\"header\">You have {{Notifications.length}} notifications</li>\n              <li>\n                <ul class=\"menu\" style=\"width: auto !important;\">\n                  <li style=\"width: auto !important;\" *ngFor=\"let single_notify of Notifications\"\n                    id=\"notification_clicked_{{single_notify.Notification_link}}\">\n                    <a href=\"javascript:void(0);\"\n                      (click)=\"Notification_clicked(single_notify.NotificationId,single_notify.Notification_link,single_notify.Notification_watched_by)\">\n                      <i class=\"fa fa-users text-aqua\"></i>{{single_notify.Notification_data}}\n                    </a>\n                  </li>\n                </ul>\n              </li>\n            </ul>\n          </li>\n          <li class=\"dropdown user user-menu\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n              <span class=\"\">{{Issue_Track_UserName}}</span>\n            </a>\n            <ul class=\"dropdown-menu\">\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"edit_profile()\"\n                  class=\"btn btn-default btn-flat User-profile-btn\">Edit Profile</a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"change_password()\"\n                  class=\"btn btn-default btn-flat User-profile-btn\">Change Password</a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"logout()\" class=\"btn btn-default btn-flat User-profile-btn\">Sign\n                  out</a>\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </div>\n    </nav>\n  </header>\n  <aside class=\"main-sidebar\">\n    <section class=\"sidebar\">\n      <div class=\"user-panel\">\n        <div class=\"pull-left image\"\n          *ngIf=\"Issue_Track_socialPlatform == 'google' || Issue_Track_socialPlatform == 'facebook'\">\n          <img src=\"{{Issue_Track_provider_pic}}\" class=\"img-circle\" alt=\"User Image\">\n        </div>\n        <div class=\"pull-left image\" *ngIf=\"Issue_Track_socialPlatform == 'normal'\">\n          <img src=\"../../../assets/img/empty_avatar.jpg\" class=\"img-circle\" alt=\"User Image\">\n        </div>\n        <div class=\"pull-left info\" style=\"height:auto;\">\n          <p>{{Issue_Track_UserName}}</p>\n          <!-- <a href=\"#\"><i class=\"fa fa-circle text-success\"></i> Online</a> -->\n        </div>\n      </div>\n      <ul class=\"sidebar-menu\" data-widget=\"tree\">\n        <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'open_issues'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('open_issues')\">\n            <i class=\"fa fa-th\"></i> <span>My Open Issues</span>\n          </a>\n        </li>\n        <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'issues_assign_to_me'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('issues_assign_to_me')\">\n            <i class=\"fa fa-th\"></i> <span>Assign to me</span>\n          </a>\n        </li>\n        <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'all_issues'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('all_issues')\">\n            <i class=\"fa fa-th\"></i> <span>All Issues</span>\n          </a>\n        </li>\n        <!-- <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'all_open_issues'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('all_open_issues')\">\n            <i class=\"fa fa-th\"></i> <span>open Issues</span>\n          </a>\n        </li>\n        <li class=\"\" [ngClass]=\"{'active': view_dashboard == 'done_issues'}\">\n          <a href=\"javascript:void(0);\" (click)=\"change_view_to('done_issues')\">\n            <i class=\"fa fa-th\"></i> <span>Done Issues</span> \n          </a>\n        </li> -->\n        <li>\n          <a href=\"javascript:void(0);\" (click)=\"create()\">\n            <i class=\"fa fa-th\"></i> <span>Create Issue</span>\n          </a>\n        </li>\n\n      </ul>\n    </section>\n  </aside>\n  <div class=\"content-wrapper\">\n    <section class=\"content-header\">\n      <h1>\n        {{view_dashboard_header}}\n      </h1>\n    </section>\n    <div class=\"btn-toolbar mb-2 mb-md-0\">\n      <div class=\"col-xs-12 col-md-12\" style=\"margin-top: 1% !important;margin-bottom: 1% !important;\">\n        <div class=\"col-xs-12 col-md-4 col-sm-12\">\n          <div class=\"input-group\">\n            <input type=\"text\" [(ngModel)]=\"SearchText\" class=\"form-control\" placeholder=\"Search\" id=\"txtSearch\" />\n            <div class=\"input-group-btn\">\n              <button class=\"btn btn-primary\" type=\"submit\">\n                <span class=\"glyphicon glyphicon-search\"></span>\n              </button>\n            </div>\n          </div>\n        </div>\n        <div class=\"col-xs-12 col-md-2 col-sm-12\">\n          <select [(ngModel)]=\"statusFilter.issue_status\" class=\"form-control\">\n            <option [value]=\"default\" selected>Filter By Status</option>\n            <option>In Backlog</option>\n            <option>In Progress</option>\n            <option>In Test</option>\n            <option>Done</option>\n          </select>\n        </div>\n        <div class=\"col-xs-12 col-md-2 col-sm-12\">\n          <select [(ngModel)]=\"FilterReporter\" class=\"form-control\">\n            <option [value]=\"default\">Filter By Reporter</option>\n            <option *ngFor=\"let all_users_data of all_users_list\" [value]=\"all_users_data.userId\">\n              {{all_users_data.userName}}</option>\n          </select>\n        </div>\n      </div>\n    </div>\n    <section class=\"content\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"box box-primary\">\n            <div class=\"box-body pad table-responsive\">\n              <table class=\"table table-bordered text-center table-striped\" border=\"1px solid\" *ngIf=\"this.view_dashboard == 'issues_assign_to_me'\">\n                <thead class=\"thead-dark\">\n                  <tr>\n                    <th [class.active]=\"order === 'issue_title'\" (click)=\"setOrder('issue_title')\">Issue Title <span\n                        [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_status'\" (click)=\"setOrder('issue_status')\">Status <span\n                        [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_reporter_name'\" (click)=\"setOrder('issue_reporter_name')\">\n                      Reporter <span [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_posted_date'\" (click)=\"setOrder('issue_posted_date')\">Date\n                      <span [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                  </tr>\n                </thead>\n                <tr\n                  *ngFor=\"let all_issues of Issues | orderBy: order:reverse:'case-insensitive' | filterBy : statusFilter | filter : SearchText | paginate: { itemsPerPage: 10, currentPage: p }\">\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_title']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_status']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_reporter_name']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_posted_date']}}</a>\n                  </td>\n                </tr>\n              </table>\n\n              <table class=\"table table-bordered text-center table-striped\" border=\"1px solid\" *ngIf=\"this.view_dashboard == 'open_issues'\">\n                <thead class=\"thead-dark\">\n                  <tr>\n                    <th [class.active]=\"order === 'issue_title'\" (click)=\"setOrder('issue_title')\">Issue Title <span\n                        [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_status'\" (click)=\"setOrder('issue_status')\">Status <span\n                        [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_assignee_name'\" (click)=\"setOrder('issue_assignee_name')\">\n                      Assignee <span [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_posted_date'\" (click)=\"setOrder('issue_posted_date')\">Date\n                      <span [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                  </tr>\n                </thead>\n                <tr\n                  *ngFor=\"let all_issues of Issues | orderBy: order:reverse:'case-insensitive' | filterBy : statusFilter | filter : SearchText | paginate: { itemsPerPage: 10, currentPage: p }\">\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_title']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_status']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_assignee_name']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_posted_date']}}</a>\n                  </td>\n                </tr>\n              </table>\n\n\n              <table class=\"table table-bordered text-center table-striped\" border=\"1px solid\" *ngIf=\"this.view_dashboard == 'all_issues'\">\n                <thead class=\"thead-dark\">\n                  <tr>\n                    <th [class.active]=\"order === 'issue_title'\" (click)=\"setOrder('issue_title')\">Issue Title <span\n                        [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_status'\" (click)=\"setOrder('issue_status')\">Status <span\n                        [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_reporter_name'\" (click)=\"setOrder('issue_reporter_name')\">\n                      Reporter <span [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_assignee_name'\" (click)=\"setOrder('issue_assignee_name')\">\n                        Assignee <span [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                    <th [class.active]=\"order === 'issue_posted_date'\" (click)=\"setOrder('issue_posted_date')\">Date\n                      <span [hidden]=\"reverse\">▼</span><span [hidden]=\"!reverse\">▲</span></th>\n                  </tr>\n                </thead>\n                <tr\n                  *ngFor=\"let all_issues of Issues | orderBy: order:reverse:'case-insensitive' | filterBy : statusFilter | filter : SearchText | paginate: { itemsPerPage: 10, currentPage: p }\">\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_title']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_status']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_reporter_name']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_assignee_name']}}</a>\n                  </td>\n                  <td>\n                    <a herf=\"javascript:void(0);\" [routerLink]=\"['/Issue',all_issues.issueId]\"\n                      style=\"cursor: pointer\">{{all_issues['issue_posted_date']}}</a>\n                  </td>\n                </tr>\n              </table>\n              <div style=\"margin-top:2% !important;\">\n                <pagination-controls (pageChange)=\"p = $event\" directionLinks=\"true\" autoHide=\"true\" responsive=\"true\"\n                  previousLabel=\"Previous\" nextLabel=\"Next\" screenReaderPaginationLabel=\"Pagination\"\n                  screenReaderPageLabel=\"page\" screenReaderCurrentLabel=\"You're on page\"></pagination-controls>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  </div>\n  <!-- Control Sidebar -->\n  <aside class=\"control-sidebar control-sidebar-dark\">\n    <ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\">\n      <li><a href=\"#control-sidebar-home-tab\" data-toggle=\"tab\"><i class=\"fa fa-home\"></i></a></li>\n      <li><a href=\"#control-sidebar-settings-tab\" data-toggle=\"tab\"><i class=\"fa fa-gears\"></i></a></li>\n    </ul>\n    <div class=\"tab-content\">\n      <div class=\"tab-pane\" id=\"control-sidebar-home-tab\">\n        <h3 class=\"control-sidebar-heading\">Recent Activity</h3>\n        <ul class=\"control-sidebar-menu\">\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-birthday-cake bg-red\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Langdon's Birthday</h4>\n                <p>Will be 23 on April 24th</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-user bg-yellow\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Frodo Updated His Profile</h4>\n                <p>New phone +1(800)555-1234</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-envelope-o bg-light-blue\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Nora Joined Mailing List</h4>\n                <p>nora@example.com</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-file-code-o bg-green\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Cron Job 254 Executed</h4>\n                <p>Execution time 5 seconds</p>\n              </div>\n            </a>\n          </li>\n        </ul>\n        <h3 class=\"control-sidebar-heading\">Tasks Progress</h3>\n        <ul class=\"control-sidebar-menu\">\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Custom Template Design\n                <span class=\"label label-danger pull-right\">70%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Update Resume\n                <span class=\"label label-success pull-right\">95%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-success\" style=\"width: 95%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Laravel Integration\n                <span class=\"label label-warning pull-right\">50%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-warning\" style=\"width: 50%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Back End Framework\n                <span class=\"label label-primary pull-right\">68%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-primary\" style=\"width: 68%\"></div>\n              </div>\n            </a>\n          </li>\n        </ul>\n      </div>\n      <div class=\"tab-pane\" id=\"control-sidebar-stats-tab\">Stats Tab Content</div>\n      <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\">\n        <form method=\"post\">\n          <h3 class=\"control-sidebar-heading\">General Settings</h3>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Report panel usage\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Some information about this general settings option\n            </p>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Allow mail redirect\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Other sets of options are available\n            </p>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Expose author name in posts\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Allow the user to show his name in blog posts\n            </p>\n          </div>\n          <h3 class=\"control-sidebar-heading\">Chat Settings</h3>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Show me as online\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Turn off notifications\n              <input type=\"checkbox\" class=\"pull-right\">\n            </label>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Delete chat history\n              <a href=\"javascript:void(0)\" class=\"text-red pull-right\"><i class=\"fa fa-trash-o\"></i></a>\n            </label>\n          </div>\n        </form>\n      </div>\n    </div>\n  </aside>\n  <div class=\"control-sidebar-bg\"></div>\n</div>\n<ngx-smart-modal data-backdrop=\"static\" data-keyboard=\"false\" #popuptwo [identifier]=\"'popuptwo'\"\n  customClass=\"msg-modal\">\n  <div>\n    <div class=\"cretae_issue_header\">\n      <h2>Create Issue</h2>\n    </div>\n    <input type=\"hidden\" name=\"issue_reporter\" [(ngModel)]=\"Issue_Track_UserId\">\n    <input type=\"hidden\" name=\"issue_reporter_name\" [(ngModel)]=\"Issue_Track_UserName\">\n    <hr>\n    <form #issue_creation_form=\"ngForm\" (ngSubmit)=\"create_iss_ue(); issue_creation_form.reset();\"\n      style=\"padding: 3% !important;\">\n      <div class=\"form-group\">\n        <label for=\"exampleInputEmail1\">Title</label>\n        <input type=\"text\" class=\"form-control\" name=\"issue_title\" [(ngModel)]=\"issue_title\" #i_title=\"ngModel\"\n          id=\"I_Title\" placeholder=\"Please Enter Issue Title\">\n        <div style=\"display: none;margin-top: 1%\" id=\"Issue_title_validation\" class=\"alert alert-danger\" role=\"alert\">\n          The Username contains illegal characters.\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"exampleInputPassword1\">Description</label>\n        <app-ngx-editor [placeholder]=\"'Enter text here...'\" [height]=\"'200px'\" [minHeight]=\"'50px'\" [spellcheck]=\"true\"\n          [(ngModel)]=\"issue_description\" name=\"issue_description\" #i_desc=\"ngModel\"></app-ngx-editor>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"exampleInputFile\">Attachment</label>\n        <input type=\"file\" name=\"attachments\" [(ngModel)]=\"attachments\" #i_attachments=\"ngModel\" id=\"is_attcah\"\n          (change)=\"OnFileSelected($event)\">\n        <img src=\"\" id=\"blah\" style=\"display:none;height:100px;width:100px;\">\n      </div>\n      <div class=\"form-group\">\n        <label for=\"exampleInputFile\">Assignee</label>\n        <select class=\"form-control\" name=\"assignee\" [(ngModel)]=\"assignee\" #i_assignee=\"ngModel\">\n          <option [value]=\"default\">Please Select Assignee</option>\n          <option *ngFor=\"let all_users_data of all_users_list\" [value]=\"all_users_data.userId\"\n            id=\"{{all_users_data.userId}}\">{{all_users_data.userName}}</option>\n        </select>\n      </div>\n      <div class=\"loader\" id=\"loader\"></div>\n      <button id=\"issue_submission_btn\" type=\"submit\" class=\"btn btn-primary\" style=\"margin-top : 2% !important;\">Create\n        Issue</button>\n    </form>\n    <button (click)=\"popuptwo.close()\" style=\"display: none;\" id=\"close_btn_creation_isssue\">Close</button>\n  </div>\n</ngx-smart-modal>");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <header class=\"main-header\">\n    <a href=\"../../index2.html\" class=\"logo\">\n      <span class=\"logo-mini\"><b>A</b>LT</span>\n      <span class=\"logo-lg\"><b>Issue</b>Track</span>\n    </a>\n    <nav class=\"navbar navbar-static-top\">\n      <a href=\"#\" class=\"sidebar-toggle\" data-toggle=\"push-menu\" role=\"button\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </a>\n      <div class=\"navbar-custom-menu\">\n        <ul class=\"nav navbar-nav\">\n            <li class=\"dropdown user user-menu\">\n                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                  <span class=\"\">{{Issue_Track_UserName}}</span>\n                </a>\n                <ul class=\"dropdown-menu\">\n                  <li>\n                      <a href=\"javascript:void(0);\" (click)=\"edit_profile()\" class=\"btn btn-default btn-flat User-profile-btn\">Edit Profile</a>\n                  </li>\n                  <li>\n                    <a href=\"javascript:void(0);\" (click)=\"change_password()\" class=\"btn btn-default btn-flat User-profile-btn\">Change Password</a>\n                  </li>\n                  <li>\n                      <a href=\"javascript:void(0);\" (click)=\"logout()\" class=\"btn btn-default btn-flat User-profile-btn\">Sign out</a>\n                  </li>\n                </ul>\n              </li>\n        </ul>\n      </div>\n    </nav>\n  </header>\n  <aside class=\"main-sidebar\">\n    <section class=\"sidebar\">\n      <div class=\"user-panel\">\n          <div class=\"pull-left image\" *ngIf=\"Issue_Track_socialPlatform == 'google' || Issue_Track_socialPlatform == 'facebook'\">\n              <img src=\"{{Issue_Track_provider_pic}}\" class=\"img-circle\" alt=\"User Image\">\n          </div>\n          <div class=\"pull-left image\" *ngIf=\"Issue_Track_socialPlatform == 'normal'\">\n            <img src=\"../../../assets/img/empty_avatar.jpg\" class=\"img-circle\" alt=\"User Image\">\n          </div>\n        <div class=\"pull-left info\" style=\"height:auto;\">\n          <p>{{Issue_Track_UserName}}</p>\n        </div>\n      </div>\n      <ul class=\"sidebar-menu\" data-widget=\"tree\">\n        <li class=\"\">\n          <a href=\"javascript:void(0);\" [routerLink]=\"['/Dashboard']\">\n            <i class=\"fa fa-th\"></i> <span>Dashboard</span>\n          </a>\n        </li>\n      </ul>\n    </section>\n  </aside>\n  <div class=\"content-wrapper\">\n    <section class=\"content-header\">\n      <h1 id=\"whole_title_content\">\n        <div class=\"inner-addon right-addon\">\n          <i id=\"title_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\" style=\"display: none;\"></i>\n          <input class=\"form-control hover_input\" type=\"text\" name=\"issue_title_data\"\n            [(ngModel)]=\"issue_info_from_api.issue_title\" #I_title=\"ngModel\" id=\"issue_title_\">\n        </div>\n        <div class=\"title_ok_cancel_btn\" id=\"title_ok_cancel_btn\">\n          <button class=\"btn ok_btn\" (click)=\"update_issue_title()\">&#10004;</button>\n          <button class=\"btn cancel_btn\" (click)=\"remove_updated_title()\">&#10008;</button>\n        </div>\n      </h1>\n    </section>\n    <section class=\"content\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"box box-primary\">\n            <div class=\"box-body pad table-responsive\">\n              <div class=\"col-md-6 issue_detail_section\">\n                <h6><span><b>Details</b></span></h6>\n                <table class=\"table text-left\">\n                  <tr>\n                    <td>Status</td>\n                    <td>\n                      <div class=\"inner-addon right-addon\">\n                        <i id=\"status_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                          style=\"display: none;padding:2.5%\"></i>\n                        <select style=\"color:black;\" class=\"form-control status_selction\" id=\"issue_status\"\n                          name=\"issue_status\" [(ngModel)]=\"issue_info_from_api.issue_status\"\n                          (change)=\"change_issue_status($event.target.value)\">\n                          <option [ngValue]=\"In_Backlog\" [selected]=\"issue_info_from_api.issue_status=='In Backlog'\">In\n                            Backlog</option>\n                          <option [ngValue]=\"In_Process\" [selected]=\"issue_info_from_api.issue_status=='In Process'\">In\n                            Process</option>\n                          <option [ngValue]=\"In_Test\" [selected]=\"issue_info_from_api.issue_status=='In Test'\">In Test\n                          </option>\n                          <option [ngValue]=\"Done\" [selected]=\"issue_info_from_api.issue_status=='Done'\">Done</option>\n                        </select>\n                      </div>\n                    </td>\n                  </tr>\n                </table>\n                <h6><span><b>Description</b></span></h6>\n                <table class=\"table text-left\">\n                  <ng-container\n                    *ngIf=\"issue_info_from_api.issue_description === undefined || issue_info_from_api.issue_description === null || issue_info_from_api.issue_description === '' \">\n                    <tr>\n                      <td>\n                        <div class=\"description_text_div inner-addon right-addon\" id=\"description_text_div\"\n                          style=\"display: block;\">\n                          <i id=\"title_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                            style=\"display: none;\"></i>\n                          Click To Add Description\n                        </div>\n                      </td>\n                    </tr>\n                  </ng-container>\n                  <ng-container\n                    *ngIf=\"issue_info_from_api.issue_description != undefined || issue_info_from_api.issue_description != null || issue_info_from_api.issue_description != '' \">\n                    <tr>\n                      <td id=description_text_div_td>\n                        <div [innerHTML]=\"issue_info_from_api.issue_description\" class=\"description_text_div inner-addon right-addon\" id=\"description_text_div\"\n                          style=\"display: block;\">\n                          <i id=\"description_edit_icon_\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                            style=\"display: none;\"></i>\n                        </div>\n                      </td>\n                    </tr>\n                    <tr id=\"editor_content\" style=\"display:none;\">\n                      <td>\n                        <app-ngx-editor [placeholder]=\"'Enter text here...'\" [height]=\"'200px'\" [minHeight]=\"'50px'\"\n                          [spellcheck]=\"true\" [(ngModel)]=\"issue_info_from_api.issue_description\"\n                          name=\"issue_description\" #i_desc=\"ngModel\"></app-ngx-editor>\n                      </td>\n                    </tr>\n                    <tr id=\"editor_content_btns\" style=\"display:none;width:100% !important;\">\n                      <td>\n                        <button class=\"btn btn-primary\" (click)=\"description_save_btn();\">Save</button>\n                      </td>\n                      <td>\n                        <button class=\"btn\" style=\"margin-left:2% !important;\"\n                          (click)=\"description_cancel_btn();\">Cancel</button>\n                      </td>\n                    </tr>\n                  </ng-container>\n                </table>\n                <h6><span><b>Attachments</b></span></h6>\n                <table class=\"table text-left\">\n                  <tr>\n                    <td>\n                      <img id=\"attchament_img_display\" src=\"\" style=\"display: none;\" title=\"Click On Image To Download\">\n                      <a id=\"download_attachment\" href=\"javascript:void(0);\" style=\"display: none\">Download Attached Document From This Link</a>\n                    </td>\n                  </tr>\n                  <tr>\n                    <td>\n                      <div class=\"form-group\">\n                        <label for=\"exampleInputFile\">Attachment</label>\n                        <input type=\"file\" name=\"attachments\" [(ngModel)]=\"attachments\" #i_attachments=\"ngModel\"\n                          id=\"is_attcah\" (change)=\"OnFileSelected($event)\">\n                          <img src=\"\" id=\"blah\" style=\"display:none;height:100px;width:100px;\">\n                      </div>\n                    </td>\n                  </tr>\n                  <tr>\n                    <td>\n                      <button class=\"btn btn-primary\" (click)=\"attachment_save_btn();\">Save</button>\n                      <button class=\"btn\" style=\"margin-left:2% !important;\"\n                        (click)=\"attachment_cancel_btn();\">Cancel</button>\n                    </td>\n                  </tr>\n                </table>\n                <h6><span><b>Activity</b></span></h6>\n                <table class=\"table text-left\">\n                  <tr>\n                    <div class=\"row\">\n                      <div class=\"col-md-12\">\n                          <div class=\"detailBox\">\n                              <div class=\"actionBox\">\n                                  <ul class=\"commentList\">\n                                      <li *ngFor=\"let x of all_comments\">\n                                          <div class=\"commenterImage\">\n                                            <img src=\"http://placekitten.com/45/45\" />\n                                          </div>\n                                          <div class=\"commentText\">\n                                              <p><b>{{x['commenter_user_name']}}</b> <span class=\"date sub-text\">&nbsp;&nbsp;{{x['posted_time']}}</span></p>\n                                              <p class=\"\" style=\"margin-top:1%;margin-bottom:5%\" [innerHTML]=\"x['comment']\"></p> \n                                          </div>\n                                      </li>\n                                  </ul>\n                              </div>\n                          </div>\n                        <input style=\"border: 1px;border-radius:1px;padding:4%;display: block\" class=\"form-control\"\n                          type=\"text\" id=\"add_comment_section_input\" placeholder=\"Add a comment...\"\n                          (click)=\"add_comment_editor()\">\n                        <app-ngx-editor id=\"add_comment\" [placeholder]=\"'Add a comment...'\" [height]=\"'200px'\"\n                          [minHeight]=\"'50px'\" [spellcheck]=\"true\" [(ngModel)]=\"add_comment_Section\" name=\"add_comment_Section\"\n                          #i_comment=\"ngModel\" style=\"display:none;\"></app-ngx-editor>\n                        <div class=\"title_ok_cancel_btn\" id=\"comment_ok_cancel_btn\"\n                          style=\"display: none;float: left;width: 100% !important;\">\n                          <button class=\"btn btn-primary\" (click)=\"add_comment_to_section()\">Post Comment</button>\n                          <button class=\"btn cancel_btn\" (click)=\"remove_add_comment_editor()\"\n                            style=\"margin-left: 2% !important;\">Cancel</button>\n                        </div>\n                      </div>\n                    </div>\n                  </tr>\n                </table>\n              </div>\n              <div class=\"col-md-5 issue_people_section\">\n                <h6><span><b>People</b></span></h6>\n                <table class=\"table text-left content_table\">\n                  <tr>\n                    <td>Assignee</td>\n                    <td>\n                      <div class=\"inner-addon right-addon\">\n                        <i id=\"assignee_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                          style=\"display: none;padding:2.5%\"></i>\n                        <input class=\"form-control assignee_text_div\" list=\"Assignee_name_list\"\n                          name=\"issue_assignee_name\" [(ngModel)]=\"issue_info_from_api.issue_assignee_name\"\n                          id=\"Assignee_name\">\n                      </div>\n                    </td>\n                    <datalist id=\"Assignee_name_list\">\n                      <option *ngFor=\"let u_list of all_users_list\" id=\"{{u_list.userId}}\"\n                        data-value=\"{{u_list.userName}}\" value=\"{{u_list.userName}}\">\n                    </datalist>\n                    <input type=\"hidden\" name=\"origional_issue_assignee\"\n                      [(ngModel)]=\"origional_issue_info.old_issue_assignee_name\" id=\"origional_issue_assignee_name\"\n                      value=\"{{origional_issue_info.old_issue_assignee_name}}\">\n                    <button id=\"update_assignee\" style=\"display: none;\" (click)=\"update_assignee();\">Update\n                      Assignee</button>\n                  </tr>\n                  <tr>\n                    <td>Reporter</td>\n                    <td>\n                      <div class=\"inner-addon right-addon\">\n                        <i id=\"reporter_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                          style=\"display: none;padding:2.5%\"></i>\n                        <input class=\"form-control repporter_text_div\" list=\"Reporter_name_list\" type=\"search\"\n                          name=\"issue_reporter_name\" [(ngModel)]=\"issue_info_from_api.issue_reporter_name\"\n                          id=\"Reporter_name\">\n                      </div>\n                    </td>\n                    <datalist id=\"Reporter_name_list\">\n                      <option *ngFor=\"let u_list of all_users_list\" id=\"{{u_list.userId}}\"\n                        data-value=\"{{u_list.userName}}\" value=\"{{u_list.userName}}\">\n                    </datalist>\n                    <input type=\"hidden\" name=\"origional_issue_reporter\"\n                      [(ngModel)]=\"origional_issue_info.old_issue_reporter_name\" id=\"origional_issue_reporter_name\"\n                      value=\"{{origional_issue_info.old_issue_reporter_name}}\">\n                    <button id=\"update_reporter\" style=\"display: none;\" (click)=\"update_reporter();\">Update\n                      Reporter</button>\n                  </tr>\n                  <tr>\n                    <td>Watchers</td>\n                    <td>\n                      <div class=\"btn-group\"><a href=\"javascript:void(0);\" id=\"watchers_cnt\"\n                          (click)=\"open_dropdown_of_watcher();\"><i class=\"fa fa-eye\"\n                            aria-hidden=\"true\"></i>&nbsp;{{watcher_id_array.length}}</a>\n                        <ul class=\"dropdown-menu watcher_m_d\" id=\"watcher_m_d\" style=\"display:none;\">\n                          <li>\n                            <div class=\"watcher_drp\">\n                              <a href=\"javascript:void(0);\" (click)=\"watch_issue()\"\n                                *ngIf=\"watcher_id_array.includes(Issue_Track_UserId) === false\">\n                                <i class=\"fa fa-eye\" aria-hidden=\"true\"></i>&nbsp;Start Watching This issue\n                              </a>\n                              <a href=\"javascript:void(0);\" (click)=\"stop_watch_issue()\"\n                                *ngIf=\"watcher_id_array.includes(Issue_Track_UserId) === true\">\n                                <i class=\"fa fa-eye\" aria-hidden=\"true\"></i>&nbsp;Stop Watching This issue\n                              </a>\n                              <hr>\n                            </div>\n                            <div class=\"watcher_list\">\n                              <div class=\"watcher_list_header\">\n                                <h5>Watchers List</h5>\n                              </div>\n                              <div>\n                                <table class=\"table text-center\">\n                                  <tr *ngFor=\"let user_name of watcher_name_array\">\n                                    {{user_name}}\n                                  </tr>\n                                </table>\n                              </div>\n                            </div>\n                          </li>\n                        </ul>\n                      </div>\n                    </td>\n                  </tr>\n                </table>\n                <h6><span><b>Dates</b></span></h6>\n                <table class=\"table text-left\">\n                  <tr>\n                    <td>Created</td>\n                    <td>{{issue_info_from_api.issue_posted_date}}</td>\n                  </tr>\n                </table>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  </div>\n  <!-- Control Sidebar -->\n  <aside class=\"control-sidebar control-sidebar-dark\">\n    <ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\">\n      <li><a href=\"#control-sidebar-home-tab\" data-toggle=\"tab\"><i class=\"fa fa-home\"></i></a></li>\n      <li><a href=\"#control-sidebar-settings-tab\" data-toggle=\"tab\"><i class=\"fa fa-gears\"></i></a></li>\n    </ul>\n    <div class=\"tab-content\">\n      <div class=\"tab-pane\" id=\"control-sidebar-home-tab\">\n        <h3 class=\"control-sidebar-heading\">Recent Activity</h3>\n        <ul class=\"control-sidebar-menu\">\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-birthday-cake bg-red\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Langdon's Birthday</h4>\n                <p>Will be 23 on April 24th</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-user bg-yellow\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Frodo Updated His Profile</h4>\n                <p>New phone +1(800)555-1234</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-envelope-o bg-light-blue\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Nora Joined Mailing List</h4>\n                <p>nora@example.com</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-file-code-o bg-green\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Cron Job 254 Executed</h4>\n                <p>Execution time 5 seconds</p>\n              </div>\n            </a>\n          </li>\n        </ul>\n        <h3 class=\"control-sidebar-heading\">Tasks Progress</h3>\n        <ul class=\"control-sidebar-menu\">\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Custom Template Design\n                <span class=\"label label-danger pull-right\">70%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Update Resume\n                <span class=\"label label-success pull-right\">95%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-success\" style=\"width: 95%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Laravel Integration\n                <span class=\"label label-warning pull-right\">50%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-warning\" style=\"width: 50%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Back End Framework\n                <span class=\"label label-primary pull-right\">68%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-primary\" style=\"width: 68%\"></div>\n              </div>\n            </a>\n          </li>\n        </ul>\n      </div>\n      <div class=\"tab-pane\" id=\"control-sidebar-stats-tab\">Stats Tab Content</div>\n      <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\">\n        <form method=\"post\">\n          <h3 class=\"control-sidebar-heading\">General Settings</h3>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Report panel usage\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Some information about this general settings option\n            </p>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Allow mail redirect\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Other sets of options are available\n            </p>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Expose author name in posts\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Allow the user to show his name in blog posts\n            </p>\n          </div>\n          <h3 class=\"control-sidebar-heading\">Chat Settings</h3>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Show me as online\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Turn off notifications\n              <input type=\"checkbox\" class=\"pull-right\">\n            </label>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Delete chat history\n              <a href=\"javascript:void(0)\" class=\"text-red pull-right\"><i class=\"fa fa-trash-o\"></i></a>\n            </label>\n          </div>\n        </form>\n      </div>\n    </div>\n  </aside>\n  <div class=\"control-sidebar-bg\"></div>\n</div>\n\n<ngx-smart-modal data-backdrop=\"static\" data-keyboard=\"false\" #popuptwo [identifier]=\"'popuptwo'\"\n  customClass=\"msg-modal\">\n  <div>\n    <div class=\"cretae_issue_header\">\n      <h2>Create Issue</h2>\n    </div>\n    <hr>\n    <button (click)=\"popuptwo.close()\" style=\"display: none;\" id=\"close_btn_creation_isssue\">Close</button>\n  </div>\n</ngx-smart-modal>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n  <header class=\"main-header\">\n    <a href=\"../../index2.html\" class=\"logo\">\n      <span class=\"logo-mini\"><b>A</b>LT</span>\n      <span class=\"logo-lg\"><b>Issue</b>Track</span>\n    </a>\n    <nav class=\"navbar navbar-static-top\">\n      <a href=\"#\" class=\"sidebar-toggle\" data-toggle=\"push-menu\" role=\"button\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </a>\n      <div class=\"navbar-custom-menu\">\n        <ul class=\"nav navbar-nav\" style=\"width: auto !important;\">\n          <li class=\"dropdown notifications-menu\" style=\"width: auto !important;\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n              <i class=\"fa fa-bell-o\"></i>\n              <span class=\"label label-warning\">{{Notifications.length}}</span>\n            </a>\n            <ul class=\"dropdown-menu\" style=\"width: auto !important;\">\n              <li class=\"header\">You have {{Notifications.length}} notifications</li>\n              <li>\n                <ul class=\"menu\" style=\"width: auto !important;\">\n                  <li style=\"width: auto !important;\" *ngFor=\"let single_notify of Notifications\"\n                    id=\"notification_clicked_{{single_notify.Notification_link}}\">\n                    <a href=\"javascript:void(0);\"\n                      (click)=\"Notification_clicked(single_notify.NotificationId,single_notify.Notification_link,single_notify.Notification_watched_by)\">\n                      <i class=\"fa fa-users text-aqua\"></i>{{single_notify.Notification_data}}\n                    </a>\n                  </li>\n                </ul>\n              </li>\n              <!-- <li class=\"footer\"><a href=\"#\">View all</a></li> -->\n            </ul>\n          </li>\n          <li class=\"dropdown user user-menu\">\n            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n              <span class=\"\">{{Issue_Track_UserName}}</span>\n            </a>\n            <ul class=\"dropdown-menu\">\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"edit_profile()\"\n                  class=\"btn btn-default btn-flat User-profile-btn\">Edit Profile</a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"change_password()\"\n                  class=\"btn btn-default btn-flat User-profile-btn\">Change Password</a>\n              </li>\n              <li>\n                <a href=\"javascript:void(0);\" (click)=\"logout()\" class=\"btn btn-default btn-flat User-profile-btn\">Sign\n                  out</a>\n              </li>\n            </ul>\n          </li>\n        </ul>\n      </div>\n    </nav>\n  </header>\n  <aside class=\"main-sidebar\">\n    <section class=\"sidebar\">\n      <div class=\"user-panel\">\n        <div class=\"pull-left image\"\n          *ngIf=\"Issue_Track_socialPlatform == 'google' || Issue_Track_socialPlatform == 'facebook'\">\n          <img src=\"{{Issue_Track_provider_pic}}\" class=\"img-circle\" alt=\"User Image\">\n        </div>\n        <div class=\"pull-left image\" *ngIf=\"Issue_Track_socialPlatform == 'normal'\">\n          <img src=\"../../../assets/img/empty_avatar.jpg\" class=\"img-circle\" alt=\"User Image\">\n        </div>\n        <div class=\"pull-left info\" style=\"height:auto;\">\n          <p>{{Issue_Track_UserName}}</p>\n        </div>\n      </div>\n      <ul class=\"sidebar-menu\" data-widget=\"tree\">\n        <li class=\"\">\n          <a href=\"javascript:void(0);\" [routerLink]=\"['/Dashboard']\">\n            <i class=\"fa fa-th\"></i> <span>Dashboard</span>\n          </a>\n        </li>\n      </ul>\n    </section>\n  </aside>\n  <div class=\"content-wrapper\">\n    <section class=\"content-header\">\n      <h1 id=\"whole_title_content\">\n        <div class=\"inner-addon right-addon\">\n          <i id=\"title_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\" style=\"display: none;\"></i>\n          <input class=\"form-control hover_input\" type=\"text\" name=\"issue_title_data\"\n            [(ngModel)]=\"issue_info_from_api.issue_title\" #I_title=\"ngModel\" id=\"issue_title_\">\n        </div>\n        <div class=\"title_ok_cancel_btn\" id=\"title_ok_cancel_btn\">\n          <button class=\"btn ok_btn\" (click)=\"update_issue_title()\">&#10004;</button>\n          <button class=\"btn cancel_btn\" (click)=\"remove_updated_title()\">&#10008;</button>\n        </div>\n      </h1>\n    </section>\n    <section class=\"content\">\n      <div class=\"row\">\n        <div class=\"col-md-12\">\n          <div class=\"box box-primary\">\n            <div class=\"box-body pad table-responsive\">\n              <div class=\"col-md-6 issue_detail_section\">\n                <h6><span><b>Details</b></span></h6>\n                <table class=\"table text-left\">\n                  <tr>\n                    <td>Status</td>\n                    <td>\n                      <div class=\"inner-addon right-addon\">\n                        <i id=\"status_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                          style=\"display: none;padding:2.5%\"></i>\n                        <select style=\"color:black;\" class=\"form-control status_selction\" id=\"issue_status\"\n                          name=\"issue_status\" [(ngModel)]=\"issue_info_from_api.issue_status\"\n                          (change)=\"change_issue_status($event.target.value)\">\n                          <option [ngValue]=\"In_Backlog\" [selected]=\"issue_info_from_api.issue_status=='In Backlog'\">In\n                            Backlog</option>\n                          <option [ngValue]=\"In_Process\" [selected]=\"issue_info_from_api.issue_status=='In Process'\">In\n                            Process</option>\n                          <option [ngValue]=\"In_Test\" [selected]=\"issue_info_from_api.issue_status=='In Test'\">In Test\n                          </option>\n                          <option [ngValue]=\"Done\" [selected]=\"issue_info_from_api.issue_status=='Done'\">Done</option>\n                        </select>\n                      </div>\n                    </td>\n                  </tr>\n                </table>\n                <h6><span><b>Description</b></span></h6>\n                <table class=\"table text-left\">\n                  <ng-container\n                    *ngIf=\"issue_info_from_api.issue_description === undefined || issue_info_from_api.issue_description === null || issue_info_from_api.issue_description === '' \">\n                    <tr>\n                      <td>\n                        <div class=\"description_text_div inner-addon right-addon\" id=\"description_text_div\"\n                          style=\"display: block;\">\n                          <i id=\"title_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                            style=\"display: none;\"></i>\n                          Click To Add Description\n                        </div>\n                      </td>\n                    </tr>\n                  </ng-container>\n                  <ng-container\n                    *ngIf=\"issue_info_from_api.issue_description != undefined || issue_info_from_api.issue_description != null || issue_info_from_api.issue_description != '' \">\n                    <tr>\n                      <td id=description_text_div_td>\n                        <div [innerHTML]=\"issue_info_from_api.issue_description\"\n                          class=\"description_text_div inner-addon right-addon\" id=\"description_text_div\"\n                          style=\"display: block;\">\n                          <i id=\"description_edit_icon_\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                            style=\"display: none;\"></i>\n                        </div>\n                      </td>\n                    </tr>\n                    <tr id=\"editor_content\" style=\"display:none;\">\n                      <td>\n                        <app-ngx-editor [placeholder]=\"'Enter text here...'\" [height]=\"'200px'\" [minHeight]=\"'50px'\"\n                          [spellcheck]=\"true\" [(ngModel)]=\"issue_info_from_api.issue_description\"\n                          name=\"issue_description\" #i_desc=\"ngModel\"></app-ngx-editor>\n                      </td>\n                    </tr>\n                    <tr id=\"editor_content_btns\" style=\"display:none;width:100% !important;\">\n                      <td>\n                        <button class=\"btn btn-primary\" (click)=\"description_save_btn();\">Save</button>\n                      </td>\n                      <td>\n                        <button class=\"btn\" style=\"margin-left:2% !important;\"\n                          (click)=\"description_cancel_btn();\">Cancel</button>\n                      </td>\n                    </tr>\n                  </ng-container>\n                </table>\n                <h6><span><b>Attachments</b></span></h6>\n                <table class=\"table text-left\">\n                  <tr>\n                    <td>\n                      <img id=\"attchament_img_display\" src=\"\" style=\"display: none;\" title=\"Click On Image To Download\">\n                      <a id=\"download_attachment\" href=\"javascript:void(0);\" style=\"display: none\">Download Attached\n                        Document From This Link</a>\n                    </td>\n                  </tr>\n                  <tr>\n                    <td>\n                      <div class=\"form-group\">\n                        <label for=\"exampleInputFile\">Attachment</label>\n                        <input type=\"file\" name=\"attachments\" [(ngModel)]=\"attachments\" #i_attachments=\"ngModel\"\n                          id=\"is_attcah\" (change)=\"OnFileSelected($event)\">\n                        <img src=\"\" id=\"blah\" style=\"display:none;height:100px;width:100px;\">\n                      </div>\n                    </td>\n                  </tr>\n                  <tr>\n                    <td>\n                      <button class=\"btn btn-primary\" (click)=\"attachment_save_btn();\">Save</button>\n                      <button class=\"btn\" style=\"margin-left:2% !important;\"\n                        (click)=\"attachment_cancel_btn();\">Cancel</button>\n                    </td>\n                  </tr>\n                </table>\n                <h6><span><b>Activity</b></span></h6>\n                <table class=\"table text-left\">\n                  <tr>\n                    <div class=\"row\">\n                      <div class=\"col-md-12\">\n                        <div class=\"detailBox\">\n                          <div class=\"actionBox\">\n                            <ul class=\"commentList\">\n                              <li *ngFor=\"let x of all_comments\">\n                                <div class=\"commenterImage\">\n                                  <img src=\"http://placekitten.com/45/45\" />\n                                </div>\n                                <div class=\"commentText\">\n                                  <p><b>{{x['commenter_user_name']}}</b> <span\n                                      class=\"date sub-text\">&nbsp;&nbsp;{{x['posted_time']}}</span></p>\n                                  <p class=\"\" style=\"margin-top:1%;margin-bottom:5%\" [innerHTML]=\"x['comment']\"></p>\n                                </div>\n                              </li>\n                            </ul>\n                          </div>\n                        </div>\n                        <input style=\"border: 1px;border-radius:1px;padding:4%;display: block\" class=\"form-control\"\n                          type=\"text\" id=\"add_comment_section_input\" placeholder=\"Add a comment...\"\n                          (click)=\"add_comment_editor()\">\n                        <app-ngx-editor id=\"add_comment\" [placeholder]=\"'Add a comment...'\" [height]=\"'200px'\"\n                          [minHeight]=\"'50px'\" [spellcheck]=\"true\" [(ngModel)]=\"add_comment_Section\"\n                          name=\"add_comment_Section\" #i_comment=\"ngModel\" style=\"display:none;\"></app-ngx-editor>\n                        <div class=\"title_ok_cancel_btn\" id=\"comment_ok_cancel_btn\"\n                          style=\"display: none;float: left;width: 100% !important;\">\n                          <button class=\"btn btn-primary\" (click)=\"add_comment_to_section()\">Post Comment</button>\n                          <button class=\"btn cancel_btn\" (click)=\"remove_add_comment_editor()\"\n                            style=\"margin-left: 2% !important;\">Cancel</button>\n                        </div>\n                      </div>\n                    </div>\n                  </tr>\n                </table>\n              </div>\n              <div class=\"col-md-5 issue_people_section\">\n                <h6><span><b>People</b></span></h6>\n                <table class=\"table text-left content_table\">\n                  <tr>\n                    <td>Assignee</td>\n                    <td>\n                      <div class=\"inner-addon right-addon\">\n                        <i id=\"assignee_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                          style=\"display: none;padding:2.5%\"></i>\n                        <input class=\"form-control assignee_text_div\" list=\"Assignee_name_list\"\n                          name=\"issue_assignee_name\" [(ngModel)]=\"issue_info_from_api.issue_assignee_name\"\n                          id=\"Assignee_name\">\n                      </div>\n                    </td>\n                    <datalist id=\"Assignee_name_list\">\n                      <option *ngFor=\"let u_list of all_users_list\" id=\"{{u_list.userId}}\"\n                        data-value=\"{{u_list.userName}}\" value=\"{{u_list.userName}}\">\n                    </datalist>\n                    <input type=\"hidden\" name=\"origional_issue_assignee\"\n                      [(ngModel)]=\"origional_issue_info.old_issue_assignee_name\" id=\"origional_issue_assignee_name\"\n                      value=\"{{origional_issue_info.old_issue_assignee_name}}\">\n                    <button id=\"update_assignee\" style=\"display: none;\" (click)=\"update_assignee();\">Update\n                      Assignee</button>\n                  </tr>\n                  <tr>\n                    <td>Reporter</td>\n                    <td>\n                      <div class=\"inner-addon right-addon\">\n                        <i id=\"reporter_edit_icon\" class=\"fa fa-pencil fa-1\" aria-hidden=\"true\"\n                          style=\"display: none;padding:2.5%\"></i>\n                        <input class=\"form-control repporter_text_div\" list=\"Reporter_name_list\" type=\"search\"\n                          name=\"issue_reporter_name\" [(ngModel)]=\"issue_info_from_api.issue_reporter_name\"\n                          id=\"Reporter_name\">\n                      </div>\n                    </td>\n                    <datalist id=\"Reporter_name_list\">\n                      <option *ngFor=\"let u_list of all_users_list\" id=\"{{u_list.userId}}\"\n                        data-value=\"{{u_list.userName}}\" value=\"{{u_list.userName}}\">\n                    </datalist>\n                    <input type=\"hidden\" name=\"origional_issue_reporter\"\n                      [(ngModel)]=\"origional_issue_info.old_issue_reporter_name\" id=\"origional_issue_reporter_name\"\n                      value=\"{{origional_issue_info.old_issue_reporter_name}}\">\n                    <button id=\"update_reporter\" style=\"display: none;\" (click)=\"update_reporter();\">Update\n                      Reporter</button>\n                  </tr>\n                  <tr>\n                    <td>Watchers</td>\n                    <td>\n                      <div class=\"btn-group\"><a href=\"javascript:void(0);\" id=\"watchers_cnt\"\n                          (click)=\"open_dropdown_of_watcher();\"><i class=\"fa fa-eye\"\n                            aria-hidden=\"true\"></i>&nbsp;{{watcher_id_array.length}}</a>\n                        <ul class=\"dropdown-menu watcher_m_d\" id=\"watcher_m_d\" style=\"display:none;\">\n                          <li>\n                            <div class=\"watcher_drp\">\n                              <a href=\"javascript:void(0);\" (click)=\"watch_issue()\"\n                                *ngIf=\"watcher_id_array.includes(Issue_Track_UserId) === false\">\n                                <i class=\"fa fa-eye\" aria-hidden=\"true\"></i>&nbsp;Start Watching This issue\n                              </a>\n                              <a href=\"javascript:void(0);\" (click)=\"stop_watch_issue()\"\n                                *ngIf=\"watcher_id_array.includes(Issue_Track_UserId) === true\">\n                                <i class=\"fa fa-eye\" aria-hidden=\"true\"></i>&nbsp;Stop Watching This issue\n                              </a>\n                              <hr>\n                            </div>\n                            <div class=\"watcher_list\">\n                              <div class=\"watcher_list_header\">\n                                <h5>Watchers List</h5>\n                              </div>\n                              <div>\n                                <table class=\"table text-center\">\n                                  <tr *ngFor=\"let user_name of watcher_name_array\">\n                                    {{user_name}}\n                                  </tr>\n                                </table>\n                              </div>\n                            </div>\n                          </li>\n                        </ul>\n                      </div>\n                    </td>\n                  </tr>\n                </table>\n                <h6><span><b>Dates</b></span></h6>\n                <table class=\"table text-left\">\n                  <tr>\n                    <td>Created</td>\n                    <td>{{issue_info_from_api.issue_posted_date}}</td>\n                  </tr>\n                </table>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </section>\n  </div>\n  <!-- Control Sidebar -->\n  <aside class=\"control-sidebar control-sidebar-dark\">\n    <ul class=\"nav nav-tabs nav-justified control-sidebar-tabs\">\n      <li><a href=\"#control-sidebar-home-tab\" data-toggle=\"tab\"><i class=\"fa fa-home\"></i></a></li>\n      <li><a href=\"#control-sidebar-settings-tab\" data-toggle=\"tab\"><i class=\"fa fa-gears\"></i></a></li>\n    </ul>\n    <div class=\"tab-content\">\n      <div class=\"tab-pane\" id=\"control-sidebar-home-tab\">\n        <h3 class=\"control-sidebar-heading\">Recent Activity</h3>\n        <ul class=\"control-sidebar-menu\">\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-birthday-cake bg-red\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Langdon's Birthday</h4>\n                <p>Will be 23 on April 24th</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-user bg-yellow\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Frodo Updated His Profile</h4>\n                <p>New phone +1(800)555-1234</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-envelope-o bg-light-blue\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Nora Joined Mailing List</h4>\n                <p>nora@example.com</p>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <i class=\"menu-icon fa fa-file-code-o bg-green\"></i>\n              <div class=\"menu-info\">\n                <h4 class=\"control-sidebar-subheading\">Cron Job 254 Executed</h4>\n                <p>Execution time 5 seconds</p>\n              </div>\n            </a>\n          </li>\n        </ul>\n        <h3 class=\"control-sidebar-heading\">Tasks Progress</h3>\n        <ul class=\"control-sidebar-menu\">\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Custom Template Design\n                <span class=\"label label-danger pull-right\">70%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-danger\" style=\"width: 70%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Update Resume\n                <span class=\"label label-success pull-right\">95%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-success\" style=\"width: 95%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Laravel Integration\n                <span class=\"label label-warning pull-right\">50%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-warning\" style=\"width: 50%\"></div>\n              </div>\n            </a>\n          </li>\n          <li>\n            <a href=\"javascript:void(0)\">\n              <h4 class=\"control-sidebar-subheading\">\n                Back End Framework\n                <span class=\"label label-primary pull-right\">68%</span>\n              </h4>\n              <div class=\"progress progress-xxs\">\n                <div class=\"progress-bar progress-bar-primary\" style=\"width: 68%\"></div>\n              </div>\n            </a>\n          </li>\n        </ul>\n      </div>\n      <div class=\"tab-pane\" id=\"control-sidebar-stats-tab\">Stats Tab Content</div>\n      <div class=\"tab-pane\" id=\"control-sidebar-settings-tab\">\n        <form method=\"post\">\n          <h3 class=\"control-sidebar-heading\">General Settings</h3>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Report panel usage\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Some information about this general settings option\n            </p>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Allow mail redirect\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Other sets of options are available\n            </p>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Expose author name in posts\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n            <p>\n              Allow the user to show his name in blog posts\n            </p>\n          </div>\n          <h3 class=\"control-sidebar-heading\">Chat Settings</h3>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Show me as online\n              <input type=\"checkbox\" class=\"pull-right\" checked>\n            </label>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Turn off notifications\n              <input type=\"checkbox\" class=\"pull-right\">\n            </label>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"control-sidebar-subheading\">\n              Delete chat history\n              <a href=\"javascript:void(0)\" class=\"text-red pull-right\"><i class=\"fa fa-trash-o\"></i></a>\n            </label>\n          </div>\n        </form>\n      </div>\n    </div>\n  </aside>\n  <div class=\"control-sidebar-bg\"></div>\n</div>\n\n<ngx-smart-modal data-backdrop=\"static\" data-keyboard=\"false\" #popuptwo [identifier]=\"'popuptwo'\"\n  customClass=\"msg-modal\">\n  <div>\n    <div class=\"cretae_issue_header\">\n      <h2>Create Issue</h2>\n    </div>\n    <hr>\n    <button (click)=\"popuptwo.close()\" style=\"display: none;\" id=\"close_btn_creation_isssue\">Close</button>\n  </div>\n</ngx-smart-modal>");
 
 /***/ }),
 
@@ -595,6 +595,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_filter_pipe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ngx-filter-pipe */ "./node_modules/ngx-filter-pipe/esm2015/ngx-filter-pipe.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 
 
 
@@ -606,8 +607,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 let DashboardComponentComponent = class DashboardComponentComponent {
-    constructor(toastr, filterPipe, _router, ngxSmartModalService, socket_service, cookie, user_service) {
+    constructor(title, toastr, filterPipe, _router, ngxSmartModalService, socket_service, cookie, user_service) {
+        this.title = title;
         this.toastr = toastr;
         this.filterPipe = filterPipe;
         this._router = _router;
@@ -623,6 +626,7 @@ let DashboardComponentComponent = class DashboardComponentComponent {
         this.order = 'info.name';
         this.reverse = false;
         this.statusFilter = { issue_status: '' };
+        this.Notifications = [];
         this.get_all_issues_Assigned_to_logged_in_user = () => {
             let logged_in_user_obj = {
                 assignee: this.Issue_Track_UserId
@@ -995,6 +999,17 @@ let DashboardComponentComponent = class DashboardComponentComponent {
         this.get_list_of_async_issues = () => {
             this.socket_service.get_list_of_Async_issues(this.Issue_Track_UserId).subscribe((data) => {
                 if (data['check_for_what'] == 'issue_creation') {
+                    if (data['notification_occurs'] == 'creation') {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                     if (this.view_dashboard == 'issues_assign_to_me') {
                         if ((this.cookie.get('Issue_Track_UserId')) == data['issue_assignee']) {
                             var only_date2 = `${new Date(data['issue_posted_date']).getDate()}-${new Date(data['issue_posted_date']).getMonth()}-${new Date(data['issue_posted_date']).getFullYear()}`;
@@ -1058,6 +1073,40 @@ let DashboardComponentComponent = class DashboardComponentComponent {
                     }
                 }
                 else if (data['check_for_what'] == 'title_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                     this.Issues = this.Issues.map(iEvent => {
                         if (iEvent.issueId === data['issue_id']) {
                             return {
@@ -1078,6 +1127,40 @@ let DashboardComponentComponent = class DashboardComponentComponent {
                     });
                 }
                 else if (data['check_for_what'] == 'description_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                     this.Issues = this.Issues.map(iEvent => {
                         if (iEvent.issueId === data['issue_id']) {
                             return {
@@ -1098,6 +1181,40 @@ let DashboardComponentComponent = class DashboardComponentComponent {
                     });
                 }
                 else if (data['check_for_what'] == 'assignee_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                     this.Issues = this.Issues.map(iEvent => {
                         if (iEvent.issueId === data['issueId']) {
                             return {
@@ -1118,6 +1235,40 @@ let DashboardComponentComponent = class DashboardComponentComponent {
                     });
                 }
                 else if (data['check_for_what'] == 'reporter_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                     this.Issues = this.Issues.map(iEvent => {
                         if (iEvent.issueId === data['issueId']) {
                             return {
@@ -1138,6 +1289,40 @@ let DashboardComponentComponent = class DashboardComponentComponent {
                     });
                 }
                 else if (data['check_for_what'] == 'status_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                     this.Issues = this.Issues.map(iEvent => {
                         if (iEvent.issueId === data['issueId']) {
                             return {
@@ -1157,7 +1342,188 @@ let DashboardComponentComponent = class DashboardComponentComponent {
                         return iEvent;
                     });
                 }
+                else if (data['check_for_what'] == 'comment_added') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                }
+                else if (data['check_for_what'] == 'Notification_updated') {
+                    this.Notifications = this.Notifications.map(iEvent => {
+                        if (iEvent.NotificationId == data['notificationId'] && iEvent.Notification_link == data['Notification_issue_id']) {
+                            return {
+                                NotificationId: iEvent.notificationId,
+                                Notification_data: iEvent.notificationTitle,
+                                Notification_link: iEvent.Notification_issue_id,
+                                Notification_watched_by: data['notification_watched_by']
+                            };
+                        }
+                        return iEvent;
+                    });
+                }
             });
+        };
+        this.get_all_notifications = () => {
+            this.socket_service.get_Notification().subscribe((apiResponse) => {
+                if (apiResponse['status'] == 200) {
+                    for (let data1 of apiResponse['data']) {
+                        if (data1['notification_occurs'] == 'creation' && data1['notitification_issue_reporter'] != this.Issue_Track_UserId) {
+                            if (data1['notification_watched_by'].watcher != ',') {
+                                let notification_watchers_id_array = data1['notification_watched_by'].slice(1, -1);
+                                if (notification_watchers_id_array.indexOf(this.Issue_Track_UserId) != -1) {
+                                    this.Notifications = [
+                                        ...this.Notifications
+                                    ];
+                                }
+                                else {
+                                    this.Notifications = [
+                                        ...this.Notifications,
+                                        {
+                                            NotificationId: data1['notificationId'],
+                                            Notification_data: data1['notificationTitle'],
+                                            Notification_link: data1['Notification_issue_id'],
+                                            Notification_watched_by: data1['notification_watched_by']
+                                        }
+                                    ];
+                                }
+                            }
+                            else {
+                                this.Notifications = [
+                                    ...this.Notifications,
+                                    {
+                                        NotificationId: data1['notificationId'],
+                                        Notification_data: data1['notificationTitle'],
+                                        Notification_link: data1['Notification_issue_id'],
+                                        Notification_watched_by: data1['notification_watched_by']
+                                    }
+                                ];
+                            }
+                        }
+                        else if (data1['notification_occurs'] == 'updation') {
+                            if (data1['notification_watched_by'].watcher != ',') {
+                                let notification_watchers_id_array = data1['notification_watched_by'].slice(1, -1);
+                                if (notification_watchers_id_array.indexOf(this.Issue_Track_UserId) != -1) {
+                                    this.Notifications = [
+                                        ...this.Notifications
+                                    ];
+                                }
+                                else {
+                                    let converted_n_watchers_id_to_array = data1['notification_issue_watchers'].split(",");
+                                    if (data1['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                                        this.Notifications = [
+                                            ...this.Notifications,
+                                            {
+                                                NotificationId: data1['notificationId'],
+                                                Notification_data: data1['notificationTitle'],
+                                                Notification_link: data1['Notification_issue_id'],
+                                                Notification_watched_by: data1['notification_watched_by']
+                                            }
+                                        ];
+                                    }
+                                    else if (data1['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                                        this.Notifications = [
+                                            ...this.Notifications,
+                                            {
+                                                NotificationId: data1['notificationId'],
+                                                Notification_data: data1['notificationTitle'],
+                                                Notification_link: data1['Notification_issue_id'],
+                                                Notification_watched_by: data1['notification_watched_by']
+                                            }
+                                        ];
+                                    }
+                                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                                        this.Notifications = [
+                                            ...this.Notifications,
+                                            {
+                                                NotificationId: data1['notificationId'],
+                                                Notification_data: data1['notificationTitle'],
+                                                Notification_link: data1['Notification_issue_id'],
+                                                Notification_watched_by: data1['notification_watched_by']
+                                            }
+                                        ];
+                                    }
+                                }
+                            }
+                            else {
+                                let converted_n_watchers_id_to_array = data1['notification_issue_watchers'].split(",");
+                                if (data1['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                                    this.Notifications = [
+                                        ...this.Notifications,
+                                        {
+                                            NotificationId: data1['notificationId'],
+                                            Notification_data: data1['notificationTitle'],
+                                            Notification_link: data1['Notification_issue_id'],
+                                            Notification_watched_by: data1['notification_watched_by']
+                                        }
+                                    ];
+                                }
+                                else if (data1['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                                    this.Notifications = [
+                                        ...this.Notifications,
+                                        {
+                                            NotificationId: data1['notificationId'],
+                                            Notification_data: data1['notificationTitle'],
+                                            Notification_link: data1['Notification_issue_id'],
+                                            Notification_watched_by: data1['notification_watched_by']
+                                        }
+                                    ];
+                                }
+                                else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                                    this.Notifications = [
+                                        ...this.Notifications,
+                                        {
+                                            NotificationId: data1['notificationId'],
+                                            Notification_data: data1['notificationTitle'],
+                                            Notification_link: data1['Notification_issue_id'],
+                                            Notification_watched_by: data1['notification_watched_by']
+                                        }
+                                    ];
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        };
+        this.Notification_clicked = (notificationid, issueid, notification_watched_by) => {
+            let Notification_watched = `${notification_watched_by}${this.Issue_Track_UserId},`;
+            let updated_notification_data = {
+                notificationId: notificationid,
+                Notification_issue_id: issueid,
+                notification_watched_by: Notification_watched,
+            };
+            this.socket_service.update_notification(updated_notification_data);
+            this._router.navigate(['/Issue', issueid]);
         };
     }
     ngOnInit() {
@@ -1176,6 +1542,8 @@ let DashboardComponentComponent = class DashboardComponentComponent {
         this.get_issues_from_all_users();
         this.get_all_user_list();
         this.get_list_of_async_issues();
+        this.get_all_notifications();
+        this.title.setTitle('Dashboard');
     }
     setOrder(value) {
         if (this.order === value) {
@@ -1188,6 +1556,7 @@ let DashboardComponentComponent = class DashboardComponentComponent {
     }
 };
 DashboardComponentComponent.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_10__["Title"] },
     { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] },
     { type: ngx_filter_pipe__WEBPACK_IMPORTED_MODULE_8__["FilterPipe"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
@@ -1318,9 +1687,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+//import { Title } from '@angular/platform-browser';
 
 let dbx = new dropbox__WEBPACK_IMPORTED_MODULE_10__["Dropbox"]({ accessToken: '6hPiXZkjq4AAAAAAAAAAH9B5muHXcLt-aPHlHHmNQwwcZGN2HnvnGrBqkf4pPkj9' });
 let ParticularIssueComponent = class ParticularIssueComponent {
+    //private title:Title,
     constructor(toastr, activated_route, _router, ngxSmartModalService, socket_service, cookie, user_service) {
         this.toastr = toastr;
         this.activated_route = activated_route;
@@ -1334,6 +1705,7 @@ let ParticularIssueComponent = class ParticularIssueComponent {
         this.watcher_id_array = [];
         this.all_users_list = [];
         this.all_comments = [];
+        this.Notifications = [];
         this.remove_add_comment_editor = () => {
             document.getElementById('add_comment').style.display = "none";
             document.getElementById('comment_ok_cancel_btn').style.display = "none";
@@ -1518,10 +1890,15 @@ let ParticularIssueComponent = class ParticularIssueComponent {
             });
         };
         this.update_issue_title = () => {
+            let watcher_id_string = this.watcher_id_array.toString();
             let updated_data = {
                 issue_id: this.issue_info_from_api.issueId,
                 old_issue_title: this.origional_issue_info['old_issue_title'],
-                new_issue_title: this.issue_info_from_api.issue_title
+                new_issue_title: this.issue_info_from_api.issue_title,
+                updated_by: this.Issue_Track_UserName,
+                issue_reporter: this.issue_info_from_api.issue_reporter,
+                issue_assignee: this.issue_info_from_api.issue_assignee,
+                issue_watchers: watcher_id_string
             };
             this.socket_service.update_I_title(updated_data);
             document.getElementById('title_ok_cancel_btn').style.display = "none";
@@ -1531,10 +1908,16 @@ let ParticularIssueComponent = class ParticularIssueComponent {
             document.getElementById('title_ok_cancel_btn').style.display = "none";
         };
         this.description_save_btn = () => {
+            let watcher_id_string = this.watcher_id_array.toString();
             let updated_description_data = {
                 issue_id: this.issue_info_from_api.issueId,
+                issue_title: this.issue_info_from_api.issue_title,
                 old_issue_description: this.origional_issue_info['old_issue_description'],
-                new_issue_description: this.issue_info_from_api.issue_description
+                new_issue_description: this.issue_info_from_api.issue_description,
+                updated_by: this.Issue_Track_UserName,
+                issue_reporter: this.issue_info_from_api.issue_reporter,
+                issue_assignee: this.issue_info_from_api.issue_assignee,
+                issue_watchers: watcher_id_string
             };
             this.socket_service.update_I_desc(updated_description_data);
             document.getElementById('description_text_div').style.display = "block";
@@ -1548,6 +1931,7 @@ let ParticularIssueComponent = class ParticularIssueComponent {
             document.getElementById('editor_content_btns').style.display = "none";
         };
         this.update_assignee = () => {
+            let watcher_id_string = this.watcher_id_array.toString();
             var selected_Assignee_name = document.getElementById('Assignee_name').value;
             var selected_assignee_id = jquery__WEBPACK_IMPORTED_MODULE_9__('#Assignee_name_list').find('option[value="' + selected_Assignee_name + '"]').attr('id');
             let updated_assignee_data = {
@@ -1555,12 +1939,18 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                 updated_assignee_name: selected_Assignee_name,
                 updated_assignee_id: selected_assignee_id,
                 old_assignee_name: this.origional_issue_info['old_issue_assignee_name'],
-                old_assignee_id: this.origional_issue_info['old_issue_assignee']
+                old_assignee_id: this.origional_issue_info['old_issue_assignee'],
+                issue_title: this.issue_info_from_api.issue_title,
+                updated_by: this.Issue_Track_UserName,
+                issue_reporter: this.issue_info_from_api.issue_reporter,
+                issue_assignee: this.issue_info_from_api.issue_assignee,
+                issue_watchers: watcher_id_string
             };
             this.socket_service.update_assignee(updated_assignee_data);
             this.get_current_issue_information(this.current_issueid);
         };
         this.update_reporter = () => {
+            let watcher_id_string = this.watcher_id_array.toString();
             var selected_Reporter_name = document.getElementById('Reporter_name').value;
             var selected_Reporter_id = jquery__WEBPACK_IMPORTED_MODULE_9__('#Reporter_name_list').find('option[value="' + selected_Reporter_name + '"]').attr('id');
             let updated_reporter_data = {
@@ -1569,15 +1959,26 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                 updated_reporter_id: selected_Reporter_id,
                 old_reporter_name: this.origional_issue_info['old_issue_reporter_name'],
                 old_reporter_id: this.origional_issue_info['old_issue_reporter_id'],
+                issue_title: this.issue_info_from_api.issue_title,
+                updated_by: this.Issue_Track_UserName,
+                issue_reporter: this.issue_info_from_api.issue_reporter,
+                issue_assignee: this.issue_info_from_api.issue_assignee,
+                issue_watchers: watcher_id_string
             };
             this.socket_service.update_reporter(updated_reporter_data);
             this.get_current_issue_information(this.current_issueid);
         };
         this.change_issue_status = (updated_issue_status) => {
+            let watcher_id_string = this.watcher_id_array.toString();
             let updated_issue_status_data = {
                 issueId: this.issue_info_from_api.issueId,
                 updated_issue_status: updated_issue_status,
-                old_issue_status: this.origional_issue_info['old_issue_status']
+                old_issue_status: this.origional_issue_info['old_issue_status'],
+                issue_title: this.issue_info_from_api.issue_title,
+                updated_by: this.Issue_Track_UserName,
+                issue_reporter: this.issue_info_from_api.issue_reporter,
+                issue_assignee: this.issue_info_from_api.issue_assignee,
+                issue_watchers: watcher_id_string
             };
             this.socket_service.update_issue_status(updated_issue_status_data);
             this.get_current_issue_information(this.current_issueid);
@@ -1624,12 +2025,18 @@ let ParticularIssueComponent = class ParticularIssueComponent {
               }); */
         };
         this.add_comment_to_section = () => {
+            let watcher_id_string = this.watcher_id_array.toString();
             let comment_data = {
                 issueId: this.current_issueid,
                 commenter_user_id: this.Issue_Track_UserId,
                 commenter_user_name: this.Issue_Track_UserName,
                 comment: this.add_comment_Section,
-                comment_posted_date: Date.now()
+                comment_posted_date: Date.now(),
+                issue_title: this.issue_info_from_api.issue_title,
+                updated_by: this.Issue_Track_UserName,
+                issue_reporter: this.issue_info_from_api.issue_reporter,
+                issue_assignee: this.issue_info_from_api.issue_assignee,
+                issue_watchers: watcher_id_string
             };
             this.socket_service.add_comment(comment_data);
             document.getElementById('add_comment').style.display = "none";
@@ -1685,29 +2092,210 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                     this.all_comments = [];
                     this.get_All_commets_for_this_issue(data['issueId']);
                 }
+                if (data['check_for_what'] == 'issue_creation') {
+                    this.Notifications = [
+                        ...this.Notifications,
+                        {
+                            NotificationId: data['notificationId'],
+                            Notification_data: data['notificationTitle'],
+                            Notification_link: data['Notification_issue_id'],
+                            Notification_watched_by: ','
+                        }
+                    ];
+                }
                 if (data['check_for_what'] == 'title_updated') {
                     this.origional_issue_info['old_issue_title'] = data['new_issue_title'];
                     this.issue_info_from_api.issue_title = data['new_issue_title'];
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                 }
                 if (data['check_for_what'] == 'description_updated') {
                     this.origional_issue_info['old_issue_description'] = data['new_issue_description'];
                     this.issue_info_from_api.issue_description = data['new_issue_description'];
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                 }
                 if (data['check_for_what'] == 'assignee_updated') {
                     this.origional_issue_info['old_assignee_id'] = data['updated_assignee_id'];
                     this.origional_issue_info['old_assignee_name'] = data['updated_assignee_name'];
                     this.issue_info_from_api.issue_assignee = data['updated_assignee_id'];
                     this.issue_info_from_api.issue_assignee_name = data['updated_assignee_name'];
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                 }
                 if (data['check_for_what'] == 'reporter_updated') {
                     this.origional_issue_info['old_issue_reporter_id'] = data['updated_reporter_id'];
                     this.origional_issue_info['old_issue_reporter_name'] = data['updated_reporter_name'];
                     this.issue_info_from_api.issue_reporter = data['updated_reporter_id'];
                     this.issue_info_from_api.issue_reporter_name = data['updated_reporter_name'];
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                 }
                 if (data['check_for_what'] == 'status_updated') {
                     this.origional_issue_info['issue_status'] = data['updated_issue_status'];
                     this.issue_info_from_api.issue_status = data['updated_issue_status'];
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
                 }
                 if (data['check_for_what'] == 'watchers_updated') {
                     this.issue_info_from_api.watcher = data['watcher_id'];
@@ -1774,6 +2362,138 @@ let ParticularIssueComponent = class ParticularIssueComponent {
             this.all_comments = [];
             this.get_All_commets_for_this_issue(this.current_issueid);
         });
+        this.get_all_notifications = () => {
+            this.socket_service.get_Notification().subscribe((apiResponse) => {
+                if (apiResponse['status'] == 200) {
+                    for (let data1 of apiResponse['data']) {
+                        if (data1['notification_occurs'] == 'creation' && data1['notitification_issue_reporter'] != this.Issue_Track_UserId) {
+                            if (data1['notification_watched_by'].watcher != ',') {
+                                let notification_watchers_id_array = data1['notification_watched_by'].slice(1, -1);
+                                if (notification_watchers_id_array.indexOf(this.Issue_Track_UserId) != -1) {
+                                    this.Notifications = [
+                                        ...this.Notifications
+                                    ];
+                                }
+                                else {
+                                    this.Notifications = [
+                                        ...this.Notifications,
+                                        {
+                                            NotificationId: data1['notificationId'],
+                                            Notification_data: data1['notificationTitle'],
+                                            Notification_link: data1['Notification_issue_id'],
+                                            Notification_watched_by: data1['notification_watched_by']
+                                        }
+                                    ];
+                                }
+                            }
+                            else {
+                                this.Notifications = [
+                                    ...this.Notifications,
+                                    {
+                                        NotificationId: data1['notificationId'],
+                                        Notification_data: data1['notificationTitle'],
+                                        Notification_link: data1['Notification_issue_id'],
+                                        Notification_watched_by: data1['notification_watched_by']
+                                    }
+                                ];
+                            }
+                        }
+                        else if (data1['notification_occurs'] == 'updation') {
+                            if (data1['notification_watched_by'].watcher != ',') {
+                                let notification_watchers_id_array = data1['notification_watched_by'].slice(1, -1);
+                                if (notification_watchers_id_array.indexOf(this.Issue_Track_UserId) != -1) {
+                                    this.Notifications = [
+                                        ...this.Notifications
+                                    ];
+                                }
+                                else {
+                                    let converted_n_watchers_id_to_array = data1['notification_issue_watchers'].split(",");
+                                    if (data1['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                                        this.Notifications = [
+                                            ...this.Notifications,
+                                            {
+                                                NotificationId: data1['notificationId'],
+                                                Notification_data: data1['notificationTitle'],
+                                                Notification_link: data1['Notification_issue_id'],
+                                                Notification_watched_by: data1['notification_watched_by']
+                                            }
+                                        ];
+                                    }
+                                    else if (data1['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                                        this.Notifications = [
+                                            ...this.Notifications,
+                                            {
+                                                NotificationId: data1['notificationId'],
+                                                Notification_data: data1['notificationTitle'],
+                                                Notification_link: data1['Notification_issue_id'],
+                                                Notification_watched_by: data1['notification_watched_by']
+                                            }
+                                        ];
+                                    }
+                                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                                        this.Notifications = [
+                                            ...this.Notifications,
+                                            {
+                                                NotificationId: data1['notificationId'],
+                                                Notification_data: data1['notificationTitle'],
+                                                Notification_link: data1['Notification_issue_id'],
+                                                Notification_watched_by: data1['notification_watched_by']
+                                            }
+                                        ];
+                                    }
+                                }
+                            }
+                            else {
+                                let converted_n_watchers_id_to_array = data1['notification_issue_watchers'].split(",");
+                                if (data1['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                                    this.Notifications = [
+                                        ...this.Notifications,
+                                        {
+                                            NotificationId: data1['notificationId'],
+                                            Notification_data: data1['notificationTitle'],
+                                            Notification_link: data1['Notification_issue_id'],
+                                            Notification_watched_by: data1['notification_watched_by']
+                                        }
+                                    ];
+                                }
+                                else if (data1['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                                    this.Notifications = [
+                                        ...this.Notifications,
+                                        {
+                                            NotificationId: data1['notificationId'],
+                                            Notification_data: data1['notificationTitle'],
+                                            Notification_link: data1['Notification_issue_id'],
+                                            Notification_watched_by: data1['notification_watched_by']
+                                        }
+                                    ];
+                                }
+                                else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                                    this.Notifications = [
+                                        ...this.Notifications,
+                                        {
+                                            NotificationId: data1['notificationId'],
+                                            Notification_data: data1['notificationTitle'],
+                                            Notification_link: data1['Notification_issue_id'],
+                                            Notification_watched_by: data1['notification_watched_by']
+                                        }
+                                    ];
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        };
+        this.Notification_clicked = (notificationid, issueid, notification_watched_by) => {
+            let Notification_watched = `${notification_watched_by}${this.Issue_Track_UserId},`;
+            let updated_notification_data = {
+                notificationId: notificationid,
+                Notification_issue_id: issueid,
+                notification_watched_by: Notification_watched,
+            };
+            this.socket_service.update_notification(updated_notification_data);
+            this._router.navigate(['/Issue', issueid]);
+        };
     }
     ngOnInit() {
         this.Issue_Track_AuthToken = this.cookie.get('Issue_Track_AuthToken');
@@ -1791,6 +2511,8 @@ let ParticularIssueComponent = class ParticularIssueComponent {
         this.get_current_issue_information(this.current_issueid);
         this.get_All_commets_for_this_issue(this.current_issueid);
         this.get_particular_comment_updation();
+        this.get_all_notifications();
+        //this.title.setTitle(this.issue_info_from_api.issue_title);
         jquery__WEBPACK_IMPORTED_MODULE_9__(document).ready(function () {
             jquery__WEBPACK_IMPORTED_MODULE_9__("#issue_title_").focus(function () {
                 document.getElementById('title_ok_cancel_btn').style.display = "block";
@@ -1943,10 +2665,10 @@ __webpack_require__.r(__webpack_exports__);
 let SocketService = class SocketService {
     constructor(_http) {
         this._http = _http;
-        this.baseUrl = "http://localhost:3000";
-        this.IssueUrl = "http://localhost:3000/api/v1/Issues";
-        this.USerUrl = "http://localhost:3000/api/v1/users";
-        this.commentUrl = "http://localhost:3000/api/v1/Comments";
+        this.baseUrl = "http://api.npatelproject.site";
+        this.IssueUrl = "http://api.npatelproject.site/api/v1/Issues";
+        this.USerUrl = "http://api.npatelproject.site/api/v1/users";
+        this.commentUrl = "http://api.npatelproject.site/api/v1/Comments";
         this.create_issue = (create_issue_data) => {
             console.log("create issue");
             this.socket.emit("create-issue", create_issue_data);
@@ -2061,7 +2783,15 @@ let SocketService = class SocketService {
                 }); // end Socket
             }); // end Observable
         };
-        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_3__('http://localhost:3000', { transports: ['websocket'] });
+        this.notificationUrl = 'http://api.npatelproject.site/api/v1/Notifications';
+        this.get_Notification = () => {
+            let response = this._http.get(`${this.notificationUrl}/get-all-notification`);
+            return response;
+        };
+        this.update_notification = (updated_notification_data) => {
+            this.socket.emit('update-notification', updated_notification_data);
+        };
+        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_3__('http://api.npatelproject.site', { transports: ['websocket'] });
     }
 };
 SocketService.ctorParameters = () => [
@@ -2097,7 +2827,7 @@ __webpack_require__.r(__webpack_exports__);
 let UserServiceService = class UserServiceService {
     constructor(_http) {
         this._http = _http;
-        this.baseUrl = "http://localhost:3000/api/v1/users";
+        this.baseUrl = "http://api.npatelproject.site/api/v1/users";
         this.setUserInfoLocalStorage = (data) => {
             localStorage.setItem('Issue_Track_userInfo', JSON.stringify(data));
         };
@@ -2238,6 +2968,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var src_app_socket_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/socket.service */ "./src/app/socket.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+
 
 
 
@@ -2247,7 +2979,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ChangePasswordComponent = class ChangePasswordComponent {
-    constructor(socket_service, toastr, _router, cookie, user_service) {
+    constructor(title, socket_service, toastr, _router, cookie, user_service) {
+        this.title = title;
         this.socket_service = socket_service;
         this.toastr = toastr;
         this._router = _router;
@@ -2384,6 +3117,7 @@ let ChangePasswordComponent = class ChangePasswordComponent {
         this.Issue_Track_provider_pic = this.cookie.get('Issue_Track_provider_pic');
         this.Issue_Track_socialPlatform = this.cookie.get('Issue_Track_socialPlatform');
         this.Issue_Track_userInfo = this.user_service.getLocalStorageUserinfo();
+        this.title.setTitle('Change Password');
         jquery__WEBPACK_IMPORTED_MODULE_6__(document).ready(function () {
             jquery__WEBPACK_IMPORTED_MODULE_6__("#exampleInputPassword1").focus(function () {
                 document.getElementById("password_validation").style.display = "none";
@@ -2442,6 +3176,7 @@ let ChangePasswordComponent = class ChangePasswordComponent {
     }
 };
 ChangePasswordComponent.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_8__["Title"] },
     { type: src_app_socket_service__WEBPACK_IMPORTED_MODULE_7__["SocketService"] },
     { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
@@ -3063,7 +3798,6 @@ let LoginComponent = class LoginComponent {
                 this._router.navigate(['/Dashboard']);
             }
             else {
-                alert();
                 jquery__WEBPACK_IMPORTED_MODULE_7__('#loader').hide(0);
                 this.toastr.error(apiResponse['message']);
             }
