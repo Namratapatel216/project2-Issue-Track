@@ -5,6 +5,7 @@ import { ToastrService } from 'ngx-toastr';
 import { CookieService } from 'ngx-cookie-service';
 import * as $ from 'jquery';
 import { SocketService } from 'src/app/socket.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-change-password',
@@ -19,7 +20,7 @@ export class ChangePasswordComponent implements OnInit {
   public Issue_Track_provider_pic;
   public Issue_Track_socialPlatform;
 
-  constructor(public socket_service:SocketService,public toastr:ToastrService,public _router : Router,public cookie:CookieService,public user_service:UserServiceService) { }
+  constructor(private title:Title,public socket_service:SocketService,public toastr:ToastrService,public _router : Router,public cookie:CookieService,public user_service:UserServiceService) { }
 
   ngOnInit() {
     this.Issue_Track_AuthToken = this.cookie.get('Issue_Track_AuthToken');
@@ -28,6 +29,7 @@ export class ChangePasswordComponent implements OnInit {
     this.Issue_Track_provider_pic = this.cookie.get('Issue_Track_provider_pic');
     this.Issue_Track_socialPlatform = this.cookie.get('Issue_Track_socialPlatform');
     this.Issue_Track_userInfo = this.user_service.getLocalStorageUserinfo();
+    this.title.setTitle('Change Password');
 
     $(document).ready(function () {
       $("#exampleInputPassword1").focus(function () {

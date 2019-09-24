@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { UserServiceService } from 'src/app/user-service.service';
 import { trimTrailingNulls } from '@angular/compiler/src/render3/view/util';
 import * as $ from 'jquery';
+//import { Title } from '@angular/platform-browser';
 import { Dropbox } from 'dropbox';
 let dbx = new Dropbox({ accessToken: '6hPiXZkjq4AAAAAAAAAAH9B5muHXcLt-aPHlHHmNQwwcZGN2HnvnGrBqkf4pPkj9' });
 
@@ -37,7 +38,8 @@ export class ParticularIssueComponent implements OnInit {
   public all_comments = [];
   public Issue_Track_provider_pic;
   public Issue_Track_socialPlatform;
-
+  public Notifications = [];
+  //private title:Title,
   constructor(public toastr: ToastrService, public activated_route: ActivatedRoute, public _router: Router, public ngxSmartModalService: NgxSmartModalService, public socket_service: SocketService, public cookie: CookieService, public user_service: UserServiceService) { }
 
   ngOnInit() {
@@ -56,6 +58,8 @@ export class ParticularIssueComponent implements OnInit {
     this.get_current_issue_information(this.current_issueid);
     this.get_All_commets_for_this_issue(this.current_issueid);
     this.get_particular_comment_updation();
+    this.get_all_notifications();
+    //this.title.setTitle(this.issue_info_from_api.issue_title);
 
     $(document).ready(function () {
       $("#issue_title_").focus(function () {
@@ -253,15 +257,13 @@ export class ParticularIssueComponent implements OnInit {
       }
     }
     let watcher_string = converted_string_to_array.toString(",");
-    if(watcher_string != '')
-    {
+    if (watcher_string != '') {
       var concat_data = `,${watcher_string},`
     }
-    else
-    {
-      var concat_data =  `,${watcher_string}`;
+    else {
+      var concat_data = `,${watcher_string}`;
     }
-    
+
     let add_data_to_watcher = {
       watcher_id: concat_data,
       issueId: this.issue_info_from_api.issueId
@@ -283,12 +285,10 @@ export class ParticularIssueComponent implements OnInit {
           old_issue_status: apiResponse['data']['issue_status']
         };
 
-        if(apiResponse['data']['issue_attachments'] != null)
-        {
+        if (apiResponse['data']['issue_attachments'] != null) {
           var file_ext1 = apiResponse['data']['issue_attachments'].split('.').pop();
           var file_ext = file_ext1.toLowerCase();
-          if(file_ext == 'bmp' || file_ext == 'gif' || file_ext == 'ico' || file_ext == 'jpeg' || file_ext == 'jpg' || file_ext == 'png' || file_ext == 'svg' || file_ext == 'tiff' || file_ext == 'tif' || file_ext == 'webp')
-          {
+          if (file_ext == 'bmp' || file_ext == 'gif' || file_ext == 'ico' || file_ext == 'jpeg' || file_ext == 'jpg' || file_ext == 'png' || file_ext == 'svg' || file_ext == 'tiff' || file_ext == 'tif' || file_ext == 'webp') {
             dbx.filesGetThumbnail({
               "path": `${apiResponse['data']['issue_attachments']}`, format: { '.tag': 'jpeg' },
               size: { '.tag': 'w480h320' },
@@ -308,29 +308,26 @@ export class ParticularIssueComponent implements OnInit {
                 //console.log(error);
               });
           }
-          else
-          {
-            dbx.filesDownload({ path: `${apiResponse['data']['issue_attachments']}`})
-              .then(function(data){
+          else {
+            dbx.filesDownload({ path: `${apiResponse['data']['issue_attachments']}` })
+              .then(function (data) {
                 var downloadUrl = URL.createObjectURL(data['fileBlob']);
                 document.getElementById('download_attachment').style.display = "block";
                 document.getElementById('attchament_img_display').style.display = "none";
-                $('#download_attachment').attr('href',downloadUrl);
+                $('#download_attachment').attr('href', downloadUrl);
               })
               .catch(function (error) {
-              console.error(error);
-            });
+                console.error(error);
+              });
           }
         }
         this.issue_info_from_api = apiResponse['data'];
       }
       this.watcher_id_array = [];
       this.watcher_name_array = [];
-      if(this.issue_info_from_api.watcher != ',')
-      {
+      if (this.issue_info_from_api.watcher != ',') {
         let removed_chars_watcher_name_array = this.issue_info_from_api.watcher.slice(1, -1);
-        if(removed_chars_watcher_name_array != '' || removed_chars_watcher_name_array != null)
-        {
+        if (removed_chars_watcher_name_array != '' || removed_chars_watcher_name_array != null) {
           let converted_string_to_array = removed_chars_watcher_name_array.split(",");
           for (let x of converted_string_to_array) {
             let whole_string_of_sliced_data = x.split(":");
@@ -368,23 +365,35 @@ export class ParticularIssueComponent implements OnInit {
     });
   }
   public update_issue_title = () => {
+    let watcher_id_string = this.watcher_id_array.toString();
     let updated_data = {
       issue_id: this.issue_info_from_api.issueId,
       old_issue_title: this.origional_issue_info['old_issue_title'],
-      new_issue_title: this.issue_info_from_api.issue_title
+      new_issue_title: this.issue_info_from_api.issue_title,
+      updated_by: this.Issue_Track_UserName,
+      issue_reporter: this.issue_info_from_api.issue_reporter,
+      issue_assignee: this.issue_info_from_api.issue_assignee,
+      issue_watchers: watcher_id_string
     }
     this.socket_service.update_I_title(updated_data);
     document.getElementById('title_ok_cancel_btn').style.display = "none";
   }
+
   public remove_updated_title = () => {
     this.issue_info_from_api.issue_title = this.origional_issue_info['old_issue_title'];
     document.getElementById('title_ok_cancel_btn').style.display = "none";
   }
   public description_save_btn = () => {
+    let watcher_id_string = this.watcher_id_array.toString();
     let updated_description_data = {
       issue_id: this.issue_info_from_api.issueId,
+      issue_title: this.issue_info_from_api.issue_title,
       old_issue_description: this.origional_issue_info['old_issue_description'],
-      new_issue_description: this.issue_info_from_api.issue_description
+      new_issue_description: this.issue_info_from_api.issue_description,
+      updated_by: this.Issue_Track_UserName,
+      issue_reporter: this.issue_info_from_api.issue_reporter,
+      issue_assignee: this.issue_info_from_api.issue_assignee,
+      issue_watchers: watcher_id_string
     }
     this.socket_service.update_I_desc(updated_description_data);
     document.getElementById('description_text_div').style.display = "block";
@@ -398,6 +407,7 @@ export class ParticularIssueComponent implements OnInit {
     document.getElementById('editor_content_btns').style.display = "none";
   }
   public update_assignee = () => {
+    let watcher_id_string = this.watcher_id_array.toString();
     var selected_Assignee_name = (<HTMLInputElement>document.getElementById('Assignee_name')).value;
     var selected_assignee_id = $('#Assignee_name_list').find('option[value="' + selected_Assignee_name + '"]').attr('id');
     let updated_assignee_data = {
@@ -405,12 +415,18 @@ export class ParticularIssueComponent implements OnInit {
       updated_assignee_name: selected_Assignee_name,
       updated_assignee_id: selected_assignee_id,
       old_assignee_name: this.origional_issue_info['old_issue_assignee_name'],
-      old_assignee_id: this.origional_issue_info['old_issue_assignee']
+      old_assignee_id: this.origional_issue_info['old_issue_assignee'],
+      issue_title: this.issue_info_from_api.issue_title,
+      updated_by: this.Issue_Track_UserName,
+      issue_reporter: this.issue_info_from_api.issue_reporter,
+      issue_assignee: this.issue_info_from_api.issue_assignee,
+      issue_watchers: watcher_id_string
     }
     this.socket_service.update_assignee(updated_assignee_data);
     this.get_current_issue_information(this.current_issueid);
   }
   public update_reporter = () => {
+    let watcher_id_string = this.watcher_id_array.toString();
     var selected_Reporter_name = (<HTMLInputElement>document.getElementById('Reporter_name')).value;
     var selected_Reporter_id = $('#Reporter_name_list').find('option[value="' + selected_Reporter_name + '"]').attr('id');
     let updated_reporter_data = {
@@ -419,15 +435,26 @@ export class ParticularIssueComponent implements OnInit {
       updated_reporter_id: selected_Reporter_id,
       old_reporter_name: this.origional_issue_info['old_issue_reporter_name'],
       old_reporter_id: this.origional_issue_info['old_issue_reporter_id'],
+      issue_title: this.issue_info_from_api.issue_title,
+      updated_by: this.Issue_Track_UserName,
+      issue_reporter: this.issue_info_from_api.issue_reporter,
+      issue_assignee: this.issue_info_from_api.issue_assignee,
+      issue_watchers: watcher_id_string
     }
     this.socket_service.update_reporter(updated_reporter_data);
     this.get_current_issue_information(this.current_issueid);
   }
   public change_issue_status = (updated_issue_status) => {
+    let watcher_id_string = this.watcher_id_array.toString();
     let updated_issue_status_data = {
       issueId: this.issue_info_from_api.issueId,
       updated_issue_status: updated_issue_status,
-      old_issue_status: this.origional_issue_info['old_issue_status']
+      old_issue_status: this.origional_issue_info['old_issue_status'],
+      issue_title: this.issue_info_from_api.issue_title,
+      updated_by: this.Issue_Track_UserName,
+      issue_reporter: this.issue_info_from_api.issue_reporter,
+      issue_assignee: this.issue_info_from_api.issue_assignee,
+      issue_watchers: watcher_id_string
     }
     this.socket_service.update_issue_status(updated_issue_status_data);
     this.get_current_issue_information(this.current_issueid);
@@ -444,8 +471,8 @@ export class ParticularIssueComponent implements OnInit {
     var reader = new FileReader();
     reader.readAsDataURL(event.target.files[0]);
     reader.onload = function (e) {
-        $('#blah').attr('src', reader.result);
-        $('#attchament_img_display').attr('src',reader.result);
+      $('#blah').attr('src', reader.result);
+      $('#attchament_img_display').attr('src', reader.result);
     }
     this.attachments = event.target.files[0];
   }
@@ -454,10 +481,10 @@ export class ParticularIssueComponent implements OnInit {
     var images_path = $('#blah').attr('src');
     let updated_attachment_details = {
       issueId: this.issue_info_from_api.issueId,
-      issue_attachments : this.attachments,
-      issue_attachment_name : this.attachments.name,
-      issue_attachment_type : this.attachments.type,
-      issue_attachment_path : images_path,
+      issue_attachments: this.attachments,
+      issue_attachment_name: this.attachments.name,
+      issue_attachment_type: this.attachments.type,
+      issue_attachment_path: images_path,
     }
     this.socket_service.save_attachment(updated_attachment_details);
     this.attachments = '';
@@ -480,12 +507,18 @@ export class ParticularIssueComponent implements OnInit {
 
   public add_comment_Section;
   public add_comment_to_section = () => {
+    let watcher_id_string = this.watcher_id_array.toString();
     let comment_data = {
-      issueId : this.current_issueid,
-      commenter_user_id : this.Issue_Track_UserId,
-      commenter_user_name : this.Issue_Track_UserName,
-      comment : this.add_comment_Section,
-      comment_posted_date : Date.now()  
+      issueId: this.current_issueid,
+      commenter_user_id: this.Issue_Track_UserId,
+      commenter_user_name: this.Issue_Track_UserName,
+      comment: this.add_comment_Section,
+      comment_posted_date: Date.now(),
+      issue_title: this.issue_info_from_api.issue_title,
+      updated_by: this.Issue_Track_UserName,
+      issue_reporter: this.issue_info_from_api.issue_reporter,
+      issue_assignee: this.issue_info_from_api.issue_assignee,
+      issue_watchers: watcher_id_string
     }
     this.socket_service.add_comment(comment_data);
     document.getElementById('add_comment').style.display = "none";
@@ -498,10 +531,8 @@ export class ParticularIssueComponent implements OnInit {
 
   public get_All_commets_for_this_issue = (issue_id) => {
     this.socket_service.get_All_comments(issue_id).subscribe((apiResponse) => {
-      if(apiResponse['status'] == 200)
-      {
-        for(let comment_data of apiResponse['data'])
-        {
+      if (apiResponse['status'] == 200) {
+        for (let comment_data of apiResponse['data']) {
           var posted_time;
           let todays_date: any = new Date();
           let issue_posted_date_time: any = new Date(comment_data['comment_posted_date']);
@@ -510,33 +541,29 @@ export class ParticularIssueComponent implements OnInit {
           var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
           var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
           var seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
-          if(diffDays > 0)
-          {
+          if (diffDays > 0) {
             posted_time = diffDays + " Days ago"
           }
-          else if(diffHrs > 0)
-          {
+          else if (diffHrs > 0) {
             posted_time = diffHrs + " Hours ago"
           }
-          else if(diffMins > 0)
-          {
+          else if (diffMins > 0) {
             posted_time = diffMins + " Minutes ago"
           }
-          else if(seconds > 0)
-          {
+          else if (seconds > 0) {
             posted_time = seconds + " Seconds ago"
           }
 
           this.all_comments = [
             ...this.all_comments,
             {
-              commentId : comment_data['commentId'],
-              issueId : comment_data['issueId'],
-              commenter_user_id : comment_data['commenter_user_id'],
-              commenter_user_name : comment_data['commenter_user_name'],
-              comment : comment_data['comment'],
-              comment_posted_date : comment_data['comment_posted_date'],
-              posted_time : posted_time
+              commentId: comment_data['commentId'],
+              issueId: comment_data['issueId'],
+              commenter_user_id: comment_data['commenter_user_id'],
+              commenter_user_name: comment_data['commenter_user_name'],
+              comment: comment_data['comment'],
+              comment_posted_date: comment_data['comment_posted_date'],
+              posted_time: posted_time
             }
           ]
         }
@@ -546,50 +573,227 @@ export class ParticularIssueComponent implements OnInit {
 
   public get_particular_comment_updation = () => {
     this.socket_service.particular_issue_comment(this.current_issueid).subscribe((data) => {
-      if(data['check_for_what'] == 'comment_added' && this.Issue_Track_UserId != data['commenter_user_id'])
-      {
+      if (data['check_for_what'] == 'comment_added' && this.Issue_Track_UserId != data['commenter_user_id']) {
         this.all_comments = [];
         this.get_All_commets_for_this_issue(data['issueId']);
       }
-      if(data['check_for_what'] == 'title_updated')
-      {
+      if (data['check_for_what'] == 'issue_creation') {
+        this.Notifications = [
+          ...this.Notifications,
+          {
+            NotificationId: data['notificationId'],
+            Notification_data: data['notificationTitle'],
+            Notification_link: data['Notification_issue_id'],
+            Notification_watched_by: ','
+          }
+        ]
+      }
+      if (data['check_for_what'] == 'title_updated') {
         this.origional_issue_info['old_issue_title'] = data['new_issue_title'];
         this.issue_info_from_api.issue_title = data['new_issue_title'];
+
+        let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+        if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
       }
-      if(data['check_for_what'] == 'description_updated')
-      {
+      if (data['check_for_what'] == 'description_updated') {
         this.origional_issue_info['old_issue_description'] = data['new_issue_description'];
         this.issue_info_from_api.issue_description = data['new_issue_description'];
+
+        let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+        if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
       }
-      if(data['check_for_what'] == 'assignee_updated')
-      {
+      if (data['check_for_what'] == 'assignee_updated') {
         this.origional_issue_info['old_assignee_id'] = data['updated_assignee_id'];
         this.origional_issue_info['old_assignee_name'] = data['updated_assignee_name'];
         this.issue_info_from_api.issue_assignee = data['updated_assignee_id'];
         this.issue_info_from_api.issue_assignee_name = data['updated_assignee_name'];
+
+        let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+        if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
       }
-      if(data['check_for_what'] == 'reporter_updated')
-      {
+      if (data['check_for_what'] == 'reporter_updated') {
         this.origional_issue_info['old_issue_reporter_id'] = data['updated_reporter_id'];
         this.origional_issue_info['old_issue_reporter_name'] = data['updated_reporter_name'];
         this.issue_info_from_api.issue_reporter = data['updated_reporter_id'];
         this.issue_info_from_api.issue_reporter_name = data['updated_reporter_name'];
+
+        let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+        if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
       }
-      if(data['check_for_what'] == 'status_updated')
-      {
+      if (data['check_for_what'] == 'status_updated') {
         this.origional_issue_info['issue_status'] = data['updated_issue_status'];
         this.issue_info_from_api.issue_status = data['updated_issue_status'];
+
+        let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+        if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
+        else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+          this.Notifications = [
+            ...this.Notifications,
+            {
+              NotificationId: data['notificationId'],
+              Notification_data: data['notificationTitle'],
+              Notification_link: data['Notification_issue_id'],
+              Notification_watched_by: ','
+            }
+          ]
+        }
       }
-      if(data['check_for_what'] == 'watchers_updated')
-      {
+      if (data['check_for_what'] == 'watchers_updated') {
         this.issue_info_from_api.watcher = data['watcher_id'];
         this.watcher_id_array = [];
         this.watcher_name_array = [];
-        if(this.issue_info_from_api.watcher != ',')
-        {
+        if (this.issue_info_from_api.watcher != ',') {
           let removed_chars_watcher_name_array = this.issue_info_from_api.watcher.slice(1, -1);
-          if(removed_chars_watcher_name_array != '' || removed_chars_watcher_name_array != null)
-          {
+          if (removed_chars_watcher_name_array != '' || removed_chars_watcher_name_array != null) {
             let converted_string_to_array = removed_chars_watcher_name_array.split(",");
             for (let x of converted_string_to_array) {
               let whole_string_of_sliced_data = x.split(":");
@@ -605,12 +809,10 @@ export class ParticularIssueComponent implements OnInit {
           }
         }
       }
-      if(data['check_for_what'] == 'attachment_updated')
-      {
+      if (data['check_for_what'] == 'attachment_updated') {
         var file_ext1 = data['issue_attachments'].split('.').pop();
         var file_ext = file_ext1.toLowerCase();
-        if(file_ext == 'bmp' || file_ext == 'gif' || file_ext == 'ico' || file_ext == 'jpeg' || file_ext == 'jpg' || file_ext == 'png' || file_ext == 'svg' || file_ext == 'tiff' || file_ext == 'tif' || file_ext == 'webp')
-        {
+        if (file_ext == 'bmp' || file_ext == 'gif' || file_ext == 'ico' || file_ext == 'jpeg' || file_ext == 'jpg' || file_ext == 'png' || file_ext == 'svg' || file_ext == 'tiff' || file_ext == 'tif' || file_ext == 'webp') {
           dbx.filesGetThumbnail({
             "path": `${data['issue_attachments']}`, format: { '.tag': 'jpeg' },
             size: { '.tag': 'w480h320' },
@@ -630,20 +832,19 @@ export class ParticularIssueComponent implements OnInit {
               //console.log(error);
             });
         }
-        else
-        {
-          dbx.filesDownload({ path: `${data['issue_attachments']}`})
-            .then(function(data){
+        else {
+          dbx.filesDownload({ path: `${data['issue_attachments']}` })
+            .then(function (data) {
               var downloadUrl = URL.createObjectURL(data['fileBlob']);
               document.getElementById('download_attachment').style.display = "block";
               document.getElementById('attchament_img_display').style.display = "none";
-              $('#download_attachment').attr('href',downloadUrl);
+              $('#download_attachment').attr('href', downloadUrl);
             })
             .catch(function (error) {
-            console.error(error);
-        });
+              console.error(error);
+            });
         }
-        
+
       }
 
     });
@@ -653,6 +854,140 @@ export class ParticularIssueComponent implements OnInit {
     .subscribe((val) => {
       this.all_comments = [];
       this.get_All_commets_for_this_issue(this.current_issueid);
-  });
+    });
 
+  public get_all_notifications = () => {
+    this.socket_service.get_Notification().subscribe((apiResponse) => {
+      if (apiResponse['status'] == 200) {
+        for (let data1 of apiResponse['data']) {
+          if (data1['notification_occurs'] == 'creation' && data1['notitification_issue_reporter'] != this.Issue_Track_UserId) {
+            if (data1['notification_watched_by'].watcher != ',') {
+              let notification_watchers_id_array = data1['notification_watched_by'].slice(1, -1);
+              if (notification_watchers_id_array.indexOf(this.Issue_Track_UserId) != -1) {
+                this.Notifications = [
+                  ...this.Notifications
+                ]
+              }
+              else {
+                this.Notifications = [
+                  ...this.Notifications,
+                  {
+                    NotificationId: data1['notificationId'],
+                    Notification_data: data1['notificationTitle'],
+                    Notification_link: data1['Notification_issue_id'],
+                    Notification_watched_by: data1['notification_watched_by']
+                  }
+                ]
+              }
+            }
+            else {
+              this.Notifications = [
+                ...this.Notifications,
+                {
+                  NotificationId: data1['notificationId'],
+                  Notification_data: data1['notificationTitle'],
+                  Notification_link: data1['Notification_issue_id'],
+                  Notification_watched_by: data1['notification_watched_by']
+                }
+              ]
+            }
+          }
+          else if (data1['notification_occurs'] == 'updation') {
+            if (data1['notification_watched_by'].watcher != ',') {
+              let notification_watchers_id_array = data1['notification_watched_by'].slice(1, -1);
+              if (notification_watchers_id_array.indexOf(this.Issue_Track_UserId) != -1) {
+                this.Notifications = [
+                  ...this.Notifications
+                ]
+              }
+              else {
+                let converted_n_watchers_id_to_array = data1['notification_issue_watchers'].split(",");
+                if (data1['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                  this.Notifications = [
+                    ...this.Notifications,
+                    {
+                      NotificationId: data1['notificationId'],
+                      Notification_data: data1['notificationTitle'],
+                      Notification_link: data1['Notification_issue_id'],
+                      Notification_watched_by: data1['notification_watched_by']
+                    }
+                  ]
+                }
+                else if (data1['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                  this.Notifications = [
+                    ...this.Notifications,
+                    {
+                      NotificationId: data1['notificationId'],
+                      Notification_data: data1['notificationTitle'],
+                      Notification_link: data1['Notification_issue_id'],
+                      Notification_watched_by: data1['notification_watched_by']
+                    }
+                  ]
+                }
+                else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                  this.Notifications = [
+                    ...this.Notifications,
+                    {
+                      NotificationId: data1['notificationId'],
+                      Notification_data: data1['notificationTitle'],
+                      Notification_link: data1['Notification_issue_id'],
+                      Notification_watched_by: data1['notification_watched_by']
+                    }
+                  ]
+                }
+              }
+            }
+            else {
+              let converted_n_watchers_id_to_array = data1['notification_issue_watchers'].split(",");
+              if (data1['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                this.Notifications = [
+                  ...this.Notifications,
+                  {
+                    NotificationId: data1['notificationId'],
+                    Notification_data: data1['notificationTitle'],
+                    Notification_link: data1['Notification_issue_id'],
+                    Notification_watched_by: data1['notification_watched_by']
+                  }
+                ]
+              }
+              else if (data1['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                this.Notifications = [
+                  ...this.Notifications,
+                  {
+                    NotificationId: data1['notificationId'],
+                    Notification_data: data1['notificationTitle'],
+                    Notification_link: data1['Notification_issue_id'],
+                    Notification_watched_by: data1['notification_watched_by']
+                  }
+                ]
+              }
+              else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                this.Notifications = [
+                  ...this.Notifications,
+                  {
+                    NotificationId: data1['notificationId'],
+                    Notification_data: data1['notificationTitle'],
+                    Notification_link: data1['Notification_issue_id'],
+                    Notification_watched_by: data1['notification_watched_by']
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    })
+  }
+
+  public Notification_clicked = (notificationid, issueid, notification_watched_by) => {
+
+    let Notification_watched = `${notification_watched_by}${this.Issue_Track_UserId},`;
+    let updated_notification_data = {
+      notificationId: notificationid,
+      Notification_issue_id: issueid,
+      notification_watched_by: Notification_watched,
+    }
+    this.socket_service.update_notification(updated_notification_data);
+    this._router.navigate(['/Issue', issueid])
+  }
 }

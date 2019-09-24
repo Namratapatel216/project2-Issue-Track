@@ -6,7 +6,7 @@ import { HttpErrorResponse, HttpParams } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserServiceService {
-  public baseUrl = "http://localhost:3000/api/v1/users";
+  public baseUrl = "http://api.npatelproject.site/api/v1/users";
 
   constructor(public _http : HttpClient) { }
 

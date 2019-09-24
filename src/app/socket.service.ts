@@ -12,14 +12,14 @@ import { map, filter, catchError, mergeMap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SocketService {
-  private baseUrl = "http://localhost:3000";
+  private baseUrl = "http://api.npatelproject.site";
   private socket;
-  private IssueUrl = "http://localhost:3000/api/v1/Issues";
-  public USerUrl = "http://localhost:3000/api/v1/users";
- public commentUrl = "http://localhost:3000/api/v1/Comments";
+  private IssueUrl = "http://api.npatelproject.site/api/v1/Issues";
+  public USerUrl = "http://api.npatelproject.site/api/v1/users";
+ public commentUrl = "http://api.npatelproject.site/api/v1/Comments";
 
   constructor(public _http: HttpClient) { 
-    this.socket = io('http://localhost:3000', { transports: ['websocket'] });
+    this.socket = io('http://api.npatelproject.site', { transports: ['websocket'] });
   }
 
   public create_issue = (create_issue_data) => {
@@ -162,5 +162,16 @@ export class SocketService {
       }); // end Socket
     }); // end Observable
   }
+
+  public notificationUrl = 'http://api.npatelproject.site/api/v1/Notifications'
+  public get_Notification = () => {
+    let response = this._http.get(`${this.notificationUrl}/get-all-notification`);
+    return response;
+  }
+
+  public update_notification = (updated_notification_data) => {
+    this.socket.emit('update-notification',updated_notification_data)
+  }
+
 
 }

@@ -33,6 +33,7 @@ const config = new AuthServiceConfig([
 export function provideConfig() {
   return config;
 }
+
 @NgModule({
   declarations: [
     AppComponent
