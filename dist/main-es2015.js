@@ -1690,7 +1690,7 @@ __webpack_require__.r(__webpack_exports__);
 
 //import { Title } from '@angular/platform-browser';
 
-let dbx = new dropbox__WEBPACK_IMPORTED_MODULE_10__["Dropbox"]({ accessToken: '8OFJNocMFEAAAAAAAAAAZSY0UJpjaDr4n7QCPzkFB7tGUT-t64CdRbyhU8yRVpvh', fetch: fetch, });
+let dbx = new dropbox__WEBPACK_IMPORTED_MODULE_10__["Dropbox"]({ accessToken: '8OFJNocMFEAAAAAAAAAAYzu26Cqaa2Hc0vuArmKPTR-dv-90_naEU6rhO9jQJUyL', fetch: fetch, });
 let ParticularIssueComponent = class ParticularIssueComponent {
     //private title:Title,
     constructor(toastr, activated_route, _router, ngxSmartModalService, socket_service, cookie, user_service) {
