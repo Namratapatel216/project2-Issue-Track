@@ -2791,7 +2791,7 @@ let SocketService = class SocketService {
         this.update_notification = (updated_notification_data) => {
             this.socket.emit('update-notification', updated_notification_data);
         };
-        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_3__('https://api.npatelproject.site', { transports: ['websocket'], secure: true });
+        this.socket = socket_io_client__WEBPACK_IMPORTED_MODULE_3__["connect"]('https://api.npatelproject.site', { transports: ['websocket'], secure: true });
     }
 };
 SocketService.ctorParameters = () => [
