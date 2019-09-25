@@ -1821,7 +1821,7 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                                 mode: { '.tag': 'strict' }
                             })
                                 .then(function (response) {
-                                //alert(JSON.stringify(response))
+                                console.log(JSON.stringify(response));
                                 var fileUrl = URL.createObjectURL(response['fileBlob']);
                                 var img = document.createElement('img');
                                 img.setAttribute('src', fileUrl);
@@ -1831,7 +1831,7 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                             })
                                 .catch(function (error) {
                                 //console.log("got error:");
-                                //console.log(error);
+                                console.log(error);
                             });
                         }
                         else {
