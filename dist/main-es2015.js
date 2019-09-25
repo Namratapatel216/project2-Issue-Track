@@ -905,6 +905,7 @@ let DashboardComponentComponent = class DashboardComponentComponent {
                     jquery__WEBPACK_IMPORTED_MODULE_9__('#blah').attr('src', '');
                     document.getElementById('blah').style.display = "none";
                 });
+                this.toastr.success("Issue Created Successfully");
                 if (data['check_for_what'] == 'issue_creation') {
                     if (this.view_dashboard == 'issues_assign_to_me') {
                         if ((this.cookie.get('Issue_Track_UserId')) == data['issue_assignee']) {
@@ -1689,7 +1690,7 @@ __webpack_require__.r(__webpack_exports__);
 
 //import { Title } from '@angular/platform-browser';
 
-let dbx = new dropbox__WEBPACK_IMPORTED_MODULE_10__["Dropbox"]({ accessToken: '6hPiXZkjq4AAAAAAAAAAH9B5muHXcLt-aPHlHHmNQwwcZGN2HnvnGrBqkf4pPkj9' });
+let dbx = new dropbox__WEBPACK_IMPORTED_MODULE_10__["Dropbox"]({ accessToken: '8OFJNocMFEAAAAAAAAAAYH8WONfBrG7Lgt288eF8xQ5LMdTiXB81jqPGD1LNHLzg' });
 let ParticularIssueComponent = class ParticularIssueComponent {
     //private title:Title,
     constructor(toastr, activated_route, _router, ngxSmartModalService, socket_service, cookie, user_service) {
@@ -2106,6 +2107,9 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                 if (data['check_for_what'] == 'title_updated') {
                     this.origional_issue_info['old_issue_title'] = data['new_issue_title'];
                     this.issue_info_from_api.issue_title = data['new_issue_title'];
+                    if (data['updated_by'] == this.Issue_Track_UserName) {
+                        this.toastr.success("Title Updated Successfully");
+                    }
                     let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
                     if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
                         this.Notifications = [
@@ -2144,6 +2148,9 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                 if (data['check_for_what'] == 'description_updated') {
                     this.origional_issue_info['old_issue_description'] = data['new_issue_description'];
                     this.issue_info_from_api.issue_description = data['new_issue_description'];
+                    if (data['updated_by'] == this.Issue_Track_UserName) {
+                        this.toastr.success("Description Updated Successfully");
+                    }
                     let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
                     if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
                         this.Notifications = [
@@ -2184,6 +2191,9 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                     this.origional_issue_info['old_assignee_name'] = data['updated_assignee_name'];
                     this.issue_info_from_api.issue_assignee = data['updated_assignee_id'];
                     this.issue_info_from_api.issue_assignee_name = data['updated_assignee_name'];
+                    if (data['updated_by'] == this.Issue_Track_UserName) {
+                        this.toastr.success("Assignee Updated Successfully");
+                    }
                     let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
                     if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
                         this.Notifications = [
@@ -2224,6 +2234,9 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                     this.origional_issue_info['old_issue_reporter_name'] = data['updated_reporter_name'];
                     this.issue_info_from_api.issue_reporter = data['updated_reporter_id'];
                     this.issue_info_from_api.issue_reporter_name = data['updated_reporter_name'];
+                    if (data['updated_by'] == this.Issue_Track_UserName) {
+                        this.toastr.success("Reporter Updated Successfully");
+                    }
                     let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
                     if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
                         this.Notifications = [
@@ -2262,6 +2275,9 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                 if (data['check_for_what'] == 'status_updated') {
                     this.origional_issue_info['issue_status'] = data['updated_issue_status'];
                     this.issue_info_from_api.issue_status = data['updated_issue_status'];
+                    if (data['updated_by'] == this.Issue_Track_UserName) {
+                        this.toastr.success("Status Updated Successfully");
+                    }
                     let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
                     if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
                         this.Notifications = [
@@ -2320,6 +2336,9 @@ let ParticularIssueComponent = class ParticularIssueComponent {
                     }
                 }
                 if (data['check_for_what'] == 'attachment_updated') {
+                    if (data['updated_by'] == this.Issue_Track_UserName) {
+                        this.toastr.success("Attachment Updated Successfully");
+                    }
                     var file_ext1 = data['issue_attachments'].split('.').pop();
                     var file_ext = file_ext1.toLowerCase();
                     if (file_ext == 'bmp' || file_ext == 'gif' || file_ext == 'ico' || file_ext == 'jpeg' || file_ext == 'jpg' || file_ext == 'png' || file_ext == 'svg' || file_ext == 'tiff' || file_ext == 'tif' || file_ext == 'webp') {
@@ -2494,6 +2513,252 @@ let ParticularIssueComponent = class ParticularIssueComponent {
             this.socket_service.update_notification(updated_notification_data);
             this._router.navigate(['/Issue', issueid]);
         };
+        this.get_list_of_async_issues = () => {
+            this.socket_service.get_list_of_Async_issues(this.Issue_Track_UserId).subscribe((data) => {
+                if (data['check_for_what'] == 'issue_creation') {
+                    if (data['notification_occurs'] == 'creation') {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                }
+                else if (data['check_for_what'] == 'title_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                }
+                else if (data['check_for_what'] == 'description_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                }
+                else if (data['check_for_what'] == 'assignee_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                }
+                else if (data['check_for_what'] == 'reporter_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                }
+                else if (data['check_for_what'] == 'status_updated') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                }
+                else if (data['check_for_what'] == 'comment_added') {
+                    let converted_n_watchers_id_to_array = data['notification_issue_watchers'].split(",");
+                    if (data['notitification_issue_reporter'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (data['notification_issue_assignee'] == this.Issue_Track_UserId) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                    else if (converted_n_watchers_id_to_array.includes(this.Issue_Track_UserId) == true) {
+                        this.Notifications = [
+                            ...this.Notifications,
+                            {
+                                NotificationId: data['notificationId'],
+                                Notification_data: data['notificationTitle'],
+                                Notification_link: data['Notification_issue_id'],
+                                Notification_watched_by: ','
+                            }
+                        ];
+                    }
+                }
+                else if (data['check_for_what'] == 'Notification_updated') {
+                    this.Notifications = this.Notifications.map(iEvent => {
+                        if (iEvent.NotificationId == data['notificationId'] && iEvent.Notification_link == data['Notification_issue_id']) {
+                            return {
+                                NotificationId: iEvent.notificationId,
+                                Notification_data: iEvent.notificationTitle,
+                                Notification_link: iEvent.Notification_issue_id,
+                                Notification_watched_by: data['notification_watched_by']
+                            };
+                        }
+                        return iEvent;
+                    });
+                }
+            });
+        };
     }
     ngOnInit() {
         this.Issue_Track_AuthToken = this.cookie.get('Issue_Track_AuthToken');
@@ -2512,6 +2777,7 @@ let ParticularIssueComponent = class ParticularIssueComponent {
         this.get_All_commets_for_this_issue(this.current_issueid);
         this.get_particular_comment_updation();
         this.get_all_notifications();
+        //this.get_list_of_async_issues();
         //this.title.setTitle(this.issue_info_from_api.issue_title);
         jquery__WEBPACK_IMPORTED_MODULE_9__(document).ready(function () {
             jquery__WEBPACK_IMPORTED_MODULE_9__("#issue_title_").focus(function () {
